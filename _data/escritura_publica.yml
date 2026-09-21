@@ -1,0 +1,69 @@
+# Columnas y ensayos breves (bloque «Escritura pública»).
+# Archivo generado por herramientas/exportar_al_sitio.py. No se edita a mano.
+- anio: "2026"
+  fecha: "2026-06-22"
+  titulo: "Investigar con IA: entre el dato y la ilusión"
+  url: "https://larepublica.pe/opinion/2026/06/22/investigar-con-ia-entre-el-dato-y-la-ilusion-por-omar-manky-hnews-2047364"
+  tipo: "Columna"
+  medio_html: "<i>La República</i>"
+  autores_cortos: "O. Manky, F. Ramírez"
+  temas: []
+- anio: "2025"
+  fecha: "2025-05-08"
+  titulo: "¿Por qué es necesario formar profesionales en la era de la IA?"
+  url: "https://larepublica.pe/opinion/2025/05/08/por-que-es-necesario-formar-profesionales-en-la-era-de-la-ia-por-omar-manky-hnews-443984"
+  tipo: "Columna"
+  medio_html: "<i>La República</i>"
+  autores_cortos: null
+  temas: []
+- anio: "2023"
+  fecha: "2023-04-28"
+  titulo: "Inteligencia artificial: el desafío de adaptarse a un nuevo escenario laboral"
+  url: "https://ciup.up.edu.pe/analisis/inteligencia-artificial-el-desafio-de-adaptarse-a-un-nuevo-escenario-laboral/"
+  tipo: "Columna"
+  medio_html: "CIUP"
+  autores_cortos: null
+  temas: []
+- anio: "2022"
+  fecha: "2022-05-05"
+  titulo: "Más solidaridad que fe"
+  url: "https://ciup.up.edu.pe/analisis/punto-de-equilibrio-25-precariedad-laboral-en-el-peru-de-la-post-pandemia/"
+  tipo: "Ensayo breve"
+  medio_html: "<i>Punto de Equilibrio</i>, CIUP"
+  autores_cortos: null
+  temas:
+    - "trabajo-organizacion-y-conflicto"
+- anio: "2021"
+  fecha: "2021-08-25"
+  titulo: "Fantasmas radicales: Viejos y nuevos problemas en la educación superior"
+  url: "https://ciup.up.edu.pe/analisis/fantasmas-radicales-viejos-y-nuevos-problemas-en-educacion-superior"
+  tipo: "Ensayo breve"
+  medio_html: "<i>Punto de Equilibrio</i>, CIUP"
+  autores_cortos: null
+  temas: []
+- anio: "2020"
+  fecha: "2020-12-10"
+  titulo: "Mamita, los alienígenas"
+  url: "https://elcomercio.pe/opinion/colaboradores/mamita-los-alienigenas-por-omar-manky-noticia/"
+  tipo: "Columna"
+  medio_html: "<i>El Comercio</i>"
+  autores_cortos: null
+  temas:
+    - "trabajo-organizacion-y-conflicto"
+- anio: "2020"
+  fecha: "2020-05-01"
+  titulo: "Un Primero de Mayo diferente: repensar y revalorar a los trabajadores"
+  url: "https://ciup.up.edu.pe/analisis/un-primero-de-mayo-diferente-repensar-revalorar-a-trabajadores/"
+  tipo: "Columna"
+  medio_html: "CIUP"
+  autores_cortos: null
+  temas:
+    - "trabajo-organizacion-y-conflicto"
+- anio: "2018"
+  fecha: "2018"
+  titulo: "¿Y los empresarios?"
+  url: "https://www.revistaquehacer.pe/1/y-los-empresarios"
+  tipo: "Ensayo breve"
+  medio_html: "<i>Quehacer</i> 1(1)"
+  autores_cortos: null
+  temas: []

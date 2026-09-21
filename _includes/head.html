@@ -1,0 +1,56 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- assign descripcion = page.description | default: site.description | strip_html | strip_newlines | escape %}
+{%- if page.url == "/" %}{% assign titulo = site.title %}{% else %}{% capture titulo %}{{ page.title | strip_html | escape }} · {{ site.title }}{% endcapture %}{% endif %}
+<title>{{ titulo }}</title>
+<meta name="description" content="{{ descripcion }}">
+{%- unless page.sin_canonica %}
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="es" href="{{ page.url | absolute_url }}">
+{%- endunless %}
+<link rel="alternate" type="application/atom+xml" title="Cuaderno · {{ site.title }}" href="{{ '/cuaderno/feed.xml' | relative_url }}">
+{%- if site.noindex or page.sin_canonica %}
+<meta name="robots" content="noindex">
+{%- endif %}
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ titulo }}">
+<meta property="og:description" content="{{ descripcion }}">
+<meta property="og:type" content="{% if page.layout == 'nota' or page.layout == 'ficha' %}article{% else %}website{% endif %}">
+<meta property="og:locale" content="es_PE">
+{%- unless page.sin_canonica %}
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{%- endunless %}
+<meta property="og:image" content="{{ '/assets/img/omar-pizarra.jpg' | absolute_url }}">
+<meta property="og:image:alt" content="Omar Manky, riendo, junto a una pizarra con un perro dibujado. Nagoya, 2025.">
+<meta name="twitter:card" content="summary_large_image">
+{%- if page.layout == "ficha" %}
+{%- for m in page.meta_citation %}
+<meta name="{{ m.nombre }}" content="{{ m.valor | escape }}">
+{%- endfor %}
+{%- endif %}
+<link rel="preload" href="{{ '/assets/fonts/newsreader-normal-300-700-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+{%- if page.layout == "ficha" and page.jsonld %}
+<script type="application/ld+json">
+{{ page.jsonld }}
+</script>
+{%- endif %}
+{%- if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Omar Manky",
+  "alternateName": ["Omar Manky Bonilla", "Walter Omar Manky Bonilla"],
+  "url": "{{ '/' | absolute_url }}",
+  "jobTitle": "Profesor asociado",
+  "affiliation": {"@type": "CollegeOrUniversity", "name": "Universidad del Pacífico"},
+  "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Cornell University"}, {"@type": "CollegeOrUniversity", "name": "Pontificia Universidad Católica del Perú"}],
+  "knowsAbout": ["sociología del trabajo", "sindicalismo", "acción colectiva", "minería", "agroexportación", "plataformas digitales", "inteligencia artificial y trabajo", "educación superior"],
+  "sameAs": ["https://orcid.org/0000-0003-1741-3461", "https://faculty.up.edu.pe/en/persons/omar-manky"]
+}
+</script>
+{%- endif %}

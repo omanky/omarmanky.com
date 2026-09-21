@@ -1,0 +1,66 @@
+---
+layout: default
+title: Publicaciones
+description: "Todo lo publicado, agrupado por tipo de trabajo. Cuando el texto está en acceso abierto, el enlace lleva al PDF; si no, a la página de la revista o de la editorial."
+permalink: /publicaciones/
+seccion: publicaciones
+---
+{%- assign todas = site.publicaciones | sort: "orden" %}
+{%- assign investigacion = todas | where: "bloque", "investigacion" %}
+{%- assign resenas = todas | where: "bloque", "resenas" %}
+{%- assign datos = todas | where: "bloque", "datos" %}
+
+  <div class="wrap row page-head">
+    <h1 class="main-wide page-title">Publicaciones</h1>
+  </div>
+
+  <div class="wrap row page-intro">
+    <div class="main prose">
+      <p class="lead">Todo lo publicado, agrupado por tipo de trabajo. Cuando el texto está en acceso abierto, el enlace lleva al PDF; si no, a la página de la revista o de la editorial.</p>
+    </div>
+  </div>
+
+  <section class="section wrap" aria-labelledby="investigacion">
+    <div class="row">
+      <h2 class="rail label label--mark" id="investigacion">Investigación</h2>
+      <div class="main-wide">
+        <ul class="cat">
+          {%- for p in investigacion %}
+          {% include fila-publicacion.html doc=p %}
+          {%- endfor %}
+        </ul>
+        {%- if resenas.size > 0 %}
+        <details class="fold">
+          <summary>Reseñas y editoriales</summary>
+          <ul class="cat">
+            {%- for p in resenas %}
+            {% include fila-publicacion.html doc=p %}
+            {%- endfor %}
+          </ul>
+        </details>
+        {%- endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" aria-labelledby="escritura-publica">
+    <div class="row">
+      <h2 class="rail label label--mark" id="escritura-publica">Escritura pública</h2>
+      <ul class="main-wide cat">
+        {%- for e in site.data.escritura_publica %}
+        {% include fila-escritura.html item=e %}
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section wrap" aria-labelledby="datos-y-recursos">
+    <div class="row">
+      <h2 class="rail label label--mark" id="datos-y-recursos">Datos y recursos</h2>
+      <ul class="main-wide cat">
+        {%- for p in datos %}
+        {% include fila-publicacion.html doc=p %}
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>

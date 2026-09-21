@@ -1,0 +1,10 @@
+{%- comment -%} Una fila de lista seca (.cat) para una ficha. Uso: {% include fila-publicacion.html doc=p %} {%- endcomment -%}
+{%- assign d = include.doc -%}
+<li>
+  <span class="y">{{ d.anio_lista }}</span>
+  <div>
+    <p class="t"{% if d.titulo_lang %} lang="{{ d.titulo_lang }}"{% endif %}><a href="{{ d.url | relative_url }}">{{ d.titulo_html }}</a></p>
+    <p class="m"><span class="k-inline k">{{ d.tipo }} · </span>{% if d.autores_cortos %}{{ d.autores_cortos }} · {% endif %}{% if d.tipo == "Capítulo" %}en {% endif %}{{ d.lugar_html }}{% if d.acceso_abierto %} · acceso abierto{% endif %}</p>
+  </div>
+  <span class="k-col">{{ d.tipo }}</span>
+</li>

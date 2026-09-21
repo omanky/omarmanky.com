@@ -1,0 +1,18 @@
+# Bloque «Estos días» de la portada. Lo que está en curso o en revisión vive solo aquí.
+- titulo: "El primer escalón"
+  estado: "Proyecto en curso"
+  texto: "Muchos profesionales aprendieron su oficio en sus primeros empleos, haciendo tareas sencillas junto a alguien con más experiencia. Investigo qué ocurre con ese aprendizaje cuando la inteligencia artificial empieza a hacer parte de las tareas con las que antes se aprendía trabajando."
+  tema: tecnologia-y-trabajo
+- titulo: "Comparando plataformas"
+  estado: "Artículo en revisión"
+  texto: "En Lima, muchos conductores y repartidores trabajan con varias aplicaciones abiertas a la vez. Estudio cómo usan la competencia entre plataformas para ganar algo de margen dentro de sistemas que también los controlan."
+  tema: tecnologia-y-trabajo
+- titulo: "¿Más allá del sindicato?"
+  estado: "Proyecto en curso"
+  con: "Con Valentina Linares"
+  texto: "estudio cómo cambiaron las huelgas y protestas laborales en el Perú desde los años noventa. Quién las hace, dónde ocurren, qué organizaciones las sostienen, y por qué una movilización puede crecer sin dejar instituciones que duren."
+  tema: trabajo-organizacion-y-conflicto
+- titulo: "China en el aula"
+  estado: "Proyecto en curso"
+  texto: "Universidades y carreras profesionales peruanas están incorporando herramientas de inteligencia artificial. Estudio cómo ocurre eso y cómo entran en el proceso empresas e infraestructuras tecnológicas de países en competencia como Estados Unidos y China."
+  tema: universidad-y-conocimiento

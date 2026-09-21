@@ -1,0 +1,449 @@
+/* omarmanky.com · sistema visual
+   Sin dependencias y sin JavaScript. Las secciones 1 a 20 son el sistema aprobado en la fase de diseño;
+   la 21 reúne lo que se añadió al construir el sitio. */
+
+/* ---------- 0. Fuentes (servidas desde el propio sitio; Newsreader e IBM Plex Mono, licencia OFL) ---------- */
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-mono-normal-400-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-mono-normal-400-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/ibm-plex-mono-normal-500-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/ibm-plex-mono-normal-500-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 300 700; font-display: swap; src: url("fonts/newsreader-italic-300-700-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 300 700; font-display: swap; src: url("fonts/newsreader-italic-300-700-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 300 700; font-display: swap; src: url("fonts/newsreader-normal-300-700-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 300 700; font-display: swap; src: url("fonts/newsreader-normal-300-700-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* ---------- 1. Tokens ---------- */
+:root {
+  /* Superficies y tinta */
+  --paper: #FAFAFA;
+  --paper-deep: #EFEFEE;
+  --ink: #1C1C1D;
+  --ink-soft: #38383A;
+  --ink-muted: #5B5B5E;
+  --rule: #DDDDDB;
+  --rule-mid: #B1B1AE;
+  --rule-strong: #1C1C1D;
+
+  /* Acentos: color de texto (>= 4.5:1) y color de marca (decorativo) */
+  --rojo: #B0321C;     --rojo-mark: #D6452A;
+  --mostaza: #7D5C00;  --mostaza-mark: #D9A00F;
+  --azul: #1D5594;     --azul-mark: #3274C2;
+  --oliva: #4A6710;    --oliva-mark: #86AE1E;
+
+  /* Acento por contexto: una sola variable. Por defecto, rojo. */
+  --accent: var(--rojo);
+  --accent-mark: var(--rojo-mark);
+
+  /* Tipografía */
+  --font-serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --fs-label: 0.75rem;     /* 12px  etiquetas de sección, mono */
+  --fs-meta: 0.8125rem;    /* 13px  metadata, mono */
+  --fs-small: 0.9375rem;   /* 15px  serif secundaria */
+  --fs-body: 1.0625rem;    /* 17px  móvil; 18px desde 56rem */
+  --fs-entry: 1.125rem;    /* 18px  título de entrada (Obra) */
+  --fs-entry-tema: 1.25rem;/* 20px  título de entrada (Temas) */
+  --fs-lead: 1.25rem;      /* 20px  móvil; 22px desde 56rem */
+  --fs-h2: 1.5rem;         /* 24px */
+  --fs-intro: clamp(1.3125rem, 1.05rem + 1.1vw, 1.75rem);  /* 21 → 28px */
+  --fs-h1: clamp(2rem, 1.45rem + 2.2vw, 3rem);             /* 32 → 48px */
+
+  --lh-body: 1.6;
+  --lh-lead: 1.45;
+  --lh-tight: 1.25;
+  --lh-display: 1.1;
+  --lh-meta: 1.5;
+
+  --track-label: 0.08em;
+  --track-meta: 0.01em;
+
+  /* Espaciado (base 4px) */
+  --s-1: 0.25rem;  --s-2: 0.5rem;  --s-3: 0.75rem; --s-4: 1rem;
+  --s-5: 1.5rem;   --s-6: 2rem;    --s-7: 3rem;    --s-8: 4rem;
+  --s-9: 6rem;     --s-10: 8rem;
+
+  /* Grilla */
+  --page-max: 75rem;
+  --page-margin: clamp(1rem, 4.5vw, 4rem);
+  --gutter: 1rem;
+  --measure: 36rem;
+  --measure-wide: 44rem;
+
+  /* Reglas */
+  --hair: 1px;
+  --mark-size: 0.5rem;
+}
+
+@media (min-width: 40rem) { :root { --gutter: 1.5rem; } }
+@media (min-width: 56rem) {
+  :root { --fs-body: 1.125rem; --fs-lead: 1.375rem; }
+}
+
+[data-accent="rojo"]    { --accent: var(--rojo);    --accent-mark: var(--rojo-mark); }
+[data-accent="mostaza"] { --accent: var(--mostaza); --accent-mark: var(--mostaza-mark); }
+[data-accent="azul"]    { --accent: var(--azul);    --accent-mark: var(--azul-mark); }
+[data-accent="oliva"]   { --accent: var(--oliva);   --accent-mark: var(--oliva-mark); }
+
+/* ---------- 2. Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-optical-sizing: auto;
+  font-kerning: normal;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  hyphens: manual;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure, blockquote { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+img { display: block; max-width: 100%; height: auto; }
+i, em, cite { font-style: italic; }
+cite { font-style: italic; }
+::selection { background: var(--accent-mark); color: var(--paper); }
+
+a { color: var(--accent); text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+a:hover { text-decoration-color: var(--accent); }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; text-decoration: none; }
+
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: var(--page-margin); top: -3rem; background: var(--ink); color: var(--paper); padding: var(--s-2) var(--s-3); font-family: var(--font-mono); font-size: var(--fs-meta); z-index: 10; }
+.skip:focus { top: var(--s-2); }
+
+.mono { font-family: var(--font-mono); font-size: var(--fs-meta); line-height: var(--lh-meta); letter-spacing: var(--track-meta); font-variant-numeric: tabular-nums; }
+
+/* ---------- 3. Grilla ---------- */
+.wrap { max-width: var(--page-max); margin-inline: auto; padding-inline: var(--page-margin); }
+.row { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: var(--gutter); }
+.rail, .main, .main-wide, .aside { grid-column: 1 / -1; min-width: 0; }
+
+@media (min-width: 56rem) {
+  .row { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .rail { grid-column: 1 / span 3; }
+  .main { grid-column: 4 / span 7; }
+  .main-wide { grid-column: 4 / -1; }
+  .aside { grid-column: 11 / -1; }
+  .main-narrow { grid-column: 4 / span 6; }
+}
+
+/* ---------- 4. Cabecera y pie ---------- */
+.site-header { padding-block: var(--s-5) var(--s-4); border-bottom: var(--hair) solid var(--rule); }
+.site-header .row { align-items: baseline; row-gap: var(--s-2); }
+.site-name { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.005em; color: var(--ink); text-decoration: none; font-variant-numeric: lining-nums; }
+.site-name:hover { color: var(--accent); }
+.site-nav { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s-3); }
+.site-nav ul { display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-5); }
+.site-nav a { color: var(--ink); text-decoration: none; padding-block: var(--s-1); border-bottom: 2px solid transparent; }
+.site-nav a:hover { border-bottom-color: var(--rule-mid); }
+.site-nav a[aria-current] { border-bottom-color: var(--accent-mark); }
+.lang { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--ink-muted); }
+.lang [aria-current] { color: var(--ink); }
+.lang a { color: var(--ink-muted); }
+
+.site-footer { margin-top: var(--s-10); border-top: var(--hair) solid var(--rule-strong); padding-block: var(--s-5) var(--s-8); }
+.site-footer .row { row-gap: var(--s-5); }
+.footer-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: var(--s-5) var(--gutter); }
+.footer-cols h2 { font-family: var(--font-mono); font-size: var(--fs-label); font-weight: 500; letter-spacing: var(--track-label); text-transform: uppercase; color: var(--ink-muted); margin-bottom: var(--s-2); }
+.footer-cols li, .footer-cols p { font-family: var(--font-mono); font-size: var(--fs-meta); line-height: 1.7; color: var(--ink-soft); }
+.footer-cols a { color: var(--ink-soft); }
+.footer-cols a:hover { color: var(--accent); }
+
+/* ---------- 5. Secciones y etiquetas ---------- */
+.section { margin-top: var(--s-9); }
+.section > .row { border-top: var(--hair) solid var(--rule-strong); padding-top: var(--s-4); row-gap: var(--s-4); }
+.section-sub { margin-top: var(--s-7); }
+.section-sub > .row { border-top: var(--hair) solid var(--rule); padding-top: var(--s-4); row-gap: var(--s-3); }
+
+.label { font-family: var(--font-mono); font-size: var(--fs-label); font-weight: 500; line-height: 1.4; letter-spacing: var(--track-label); text-transform: uppercase; color: var(--ink-soft); }
+.label--mark::before { content: ""; display: inline-block; width: var(--mark-size); height: var(--mark-size); margin-right: 0.6em; background: var(--accent-mark); vertical-align: 0.05em; }
+.label .count { color: var(--ink-muted); letter-spacing: 0; }
+
+.eyebrow { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--ink-muted); }
+.eyebrow a { color: var(--ink-muted); }
+.eyebrow .sep { margin-inline: 0.4em; color: var(--rule-mid); }
+
+.mark { display: inline-block; width: var(--mark-size); height: var(--mark-size); background: var(--accent-mark); vertical-align: 0.08em; margin-right: 0.45em; flex: none; }
+.mark--rojo { background: var(--rojo-mark); }
+.mark--mostaza { background: var(--mostaza-mark); }
+.mark--azul { background: var(--azul-mark); }
+.mark--oliva { background: var(--oliva-mark); }
+
+/* ---------- 6. Prosa ---------- */
+.prose > * + * { margin-top: var(--s-4); }
+.prose { max-width: var(--measure); }
+.prose .lead, .lead { font-size: var(--fs-lead); line-height: var(--lh-lead); }
+.intro { font-size: var(--fs-intro); line-height: 1.4; letter-spacing: -0.005em; max-width: 30em; }
+.intro + .intro-after { margin-top: var(--s-5); font-size: var(--fs-body); color: var(--ink-soft); max-width: var(--measure); }
+
+.page-title { font-size: var(--fs-h1); line-height: var(--lh-display); font-weight: 500; letter-spacing: -0.015em; font-variant-numeric: lining-nums; text-wrap: balance; }
+.h2 { font-size: var(--fs-h2); line-height: var(--lh-tight); font-weight: 500; letter-spacing: -0.005em; }
+
+/* ---------- 7. Foto ---------- */
+.photo { width: 7rem; }
+.photo-frame { aspect-ratio: 4 / 5; background: var(--paper-deep); border: var(--hair) solid var(--rule); display: grid; place-items: center; overflow: hidden; }
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+.photo-frame .placeholder { font-family: var(--font-mono); font-size: var(--fs-label); color: var(--ink-muted); text-align: center; padding: var(--s-2); line-height: 1.4; }
+.photo figcaption { margin-top: var(--s-2); font-family: var(--font-mono); font-size: var(--fs-label); color: var(--ink-muted); }
+@media (min-width: 56rem) { .photo { width: 10rem; } }
+
+/* ---------- 8. Portada: Ahora ---------- */
+.now-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-6) var(--s-7); }
+@media (min-width: 40rem) { .now-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.now-item { border-top: var(--hair) solid var(--rule); padding-top: var(--s-3); }
+.now-item .status { display: block; font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--ink-muted); margin-bottom: var(--s-2); }
+.now-item h3 { font-size: 1.3125rem; line-height: var(--lh-tight); font-weight: 500; margin-bottom: var(--s-2); }
+.now-item p { font-size: var(--fs-small); line-height: 1.55; color: var(--ink-soft); }
+.now-item .with { font-style: italic; }
+.now-item .to { margin-top: var(--s-2); font-family: var(--font-mono); font-size: var(--fs-meta); }
+
+/* ---------- 9. Portada: índice de temas ---------- */
+.theme-index li { border-top: var(--hair) solid var(--rule); }
+.theme-index li:last-child { border-bottom: var(--hair) solid var(--rule); }
+.theme-index a { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: var(--s-3); padding-block: var(--s-4) var(--s-5); color: var(--ink); text-decoration: none; }
+.theme-index .num { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--accent); padding-top: 0.55em; }
+.theme-index .t { font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem); line-height: var(--lh-tight); font-weight: 500; letter-spacing: -0.01em; }
+.theme-index .q { grid-column: 2; margin-top: var(--s-2); color: var(--ink-soft); max-width: var(--measure); }
+.theme-index a:hover .t { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.15em; text-decoration-color: var(--accent-mark); }
+.theme-index a:focus-visible { outline-offset: -2px; }
+
+/* ---------- 10. Lista de catálogo (Obra, seca y densa) ---------- */
+.cat { border-top: var(--hair) solid var(--rule-strong); }
+.cat li { display: grid; grid-template-columns: 3.25rem minmax(0, 1fr); column-gap: var(--s-3); padding-block: var(--s-3); border-bottom: var(--hair) solid var(--rule); }
+.cat .y { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--ink-muted); padding-top: 0.2em; font-variant-numeric: tabular-nums; }
+.cat .t { font-size: var(--fs-entry); line-height: 1.35; font-weight: 450; }
+.cat .t a { color: var(--ink); text-decoration: none; }
+.cat .t a:hover { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-mark); }
+.cat .m { font-family: var(--font-mono); font-size: var(--fs-meta); line-height: var(--lh-meta); color: var(--ink-muted); margin-top: var(--s-1); }
+.cat .m i { font-family: var(--font-serif); font-size: 1.08em; }
+.cat .k { color: var(--ink-soft); }
+@media (min-width: 56rem) {
+  .cat li { grid-template-columns: 3.25rem minmax(0, 1fr) 8rem; }
+  .cat .k-col { display: block; font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--ink-soft); text-align: right; padding-top: 0.2em; }
+  .cat .k-inline { display: none; }
+}
+@media (max-width: 55.99rem) { .cat .k-col { display: none; } }
+.cat .current { background: var(--paper-deep); box-shadow: -0.5rem 0 0 var(--paper-deep), 0.5rem 0 0 var(--paper-deep); }
+
+/* ---------- 11. Lista de tema (editorial, con aire) ---------- */
+.group + .group { margin-top: var(--s-8); }
+.group-q { font-size: 1.25rem; line-height: 1.3; font-style: italic; font-weight: 400; color: var(--ink); text-wrap: balance; }
+.group-q .n { display: block; font-style: normal; font-family: var(--font-mono); font-size: var(--fs-label); letter-spacing: var(--track-label); color: var(--accent); margin-bottom: var(--s-2); }
+@media (min-width: 56rem) { .group-q { position: sticky; top: var(--s-5); font-size: 1.1875rem; padding-right: var(--s-4); } }
+
+.works li { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); column-gap: var(--s-3); padding-block: var(--s-4) var(--s-5); border-top: var(--hair) solid var(--rule); }
+.works li:first-child { border-top-color: var(--rule-mid); }
+.works .y { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--accent); padding-top: 0.35em; font-variant-numeric: tabular-nums; }
+.works .t { font-size: var(--fs-entry-tema); line-height: 1.3; font-weight: 500; text-wrap: pretty; }
+.works .t a { color: var(--ink); text-decoration: none; }
+.works .t a:hover { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--accent-mark); }
+.works .who { font-style: italic; color: var(--ink-soft); margin-top: var(--s-1); font-size: var(--fs-small); }
+.works .m { font-family: var(--font-mono); font-size: var(--fs-meta); line-height: var(--lh-meta); color: var(--ink-muted); margin-top: var(--s-1); }
+.works .m i { font-family: var(--font-serif); font-size: 1.08em; }
+.works .note { margin-top: var(--s-2); color: var(--ink-soft); max-width: var(--measure); font-size: var(--fs-small); line-height: 1.55; }
+.works .also { margin-top: var(--s-2); font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--ink-muted); }
+.works .also a { color: var(--ink-soft); }
+.works .status { color: var(--ink-soft); }
+
+/* ---------- 12. Bloque Ahora dentro de un tema ---------- */
+.now-inline { border-left: 3px solid var(--accent-mark); padding-left: var(--s-4); max-width: var(--measure); }
+.now-inline .status { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--ink-muted); }
+.now-inline h3 { font-size: 1.375rem; line-height: var(--lh-tight); font-weight: 500; margin-block: var(--s-1) var(--s-3); }
+.now-inline p + p { margin-top: var(--s-3); }
+
+/* ---------- 13. Otros temas ---------- */
+.cross { display: flex; flex-direction: column; gap: var(--s-2); }
+.cross a { color: var(--ink); text-decoration: none; }
+.cross a:hover { color: var(--accent); text-decoration: underline; text-decoration-color: var(--rule-mid); }
+@media (min-width: 40rem) { .cross { flex-direction: row; flex-wrap: wrap; gap: var(--s-2) var(--s-6); } }
+
+/* ---------- 14. Ficha de obra ---------- */
+.record-head { padding-top: var(--s-7); row-gap: var(--s-4); }
+.record-kind { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--ink-muted); line-height: 1.6; }
+.record-kind .yr { display: block; font-size: 1.5rem; line-height: 1.1; color: var(--ink); letter-spacing: -0.01em; margin-bottom: var(--s-1); }
+.record-title { font-size: clamp(1.75rem, 1.35rem + 1.7vw, 2.5rem); line-height: 1.15; font-weight: 500; letter-spacing: -0.012em; text-wrap: balance; }
+.record-authors { margin-top: var(--s-4); font-size: var(--fs-lead); line-height: var(--lh-lead); }
+.record-venue { margin-top: var(--s-2); color: var(--ink-soft); }
+.access { margin-top: var(--s-5); display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); font-family: var(--font-mono); font-size: var(--fs-meta); }
+.access a { white-space: nowrap; }
+.access .oa::before { content: "OA"; display: inline-block; margin-right: 0.5em; padding: 0 0.3em; border: 1px solid currentColor; font-size: 0.85em; line-height: 1.4; letter-spacing: 0.04em; }
+
+.field + .field { margin-top: var(--s-6); }
+.field h2 { margin-bottom: var(--s-2); }
+.field p { max-width: var(--measure); }
+.field .plain { font-size: var(--fs-lead); line-height: var(--lh-lead); }
+
+.spec { font-family: var(--font-mono); font-size: var(--fs-meta); line-height: var(--lh-meta); border-top: var(--hair) solid var(--rule-strong); }
+.spec div { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); column-gap: var(--s-3); padding-block: var(--s-2); border-bottom: var(--hair) solid var(--rule); }
+.spec dt { color: var(--ink-muted); }
+.spec dd { color: var(--ink); overflow-wrap: anywhere; }
+.spec dd i { font-family: var(--font-serif); font-size: 1.08em; }
+@media (min-width: 56rem) and (max-width: 74.99rem) { .spec div { grid-template-columns: minmax(0, 1fr); } }
+
+.cite-block { max-width: var(--measure-wide); }
+.cite-block .ref { padding: var(--s-4); background: var(--paper-deep); font-size: var(--fs-small); line-height: 1.55; padding-left: calc(var(--s-4) + 1.5em); text-indent: -1.5em; }
+.cite-block details { margin-top: var(--s-3); font-family: var(--font-mono); font-size: var(--fs-meta); }
+.cite-block summary { cursor: pointer; color: var(--accent); width: fit-content; }
+.cite-block pre { margin: var(--s-2) 0 0; padding: var(--s-4); background: var(--paper-deep); overflow-x: auto; font-family: var(--font-mono); font-size: var(--fs-meta); line-height: 1.55; color: var(--ink-soft); }
+
+.abstract { color: var(--ink-soft); font-size: var(--fs-small); line-height: 1.6; max-width: var(--measure); }
+
+/* ---------- 15. Impresión y movimiento ---------- */
+@media print {
+  .site-header nav, .site-footer, .skip { display: none; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  a { color: inherit; text-decoration: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* ---------- 16. Ajustes tras la primera revisión ---------- */
+/* Una sola regla por arranque de sección: la lista no repite la línea de la sección. */
+.section .cat, .section-sub .cat { border-top: 0; }
+.section .theme-index li:first-child { border-top: 0; }
+.section .theme-index a { padding-top: var(--s-2); }
+.now-item:first-child { border-top: 0; padding-top: 0; }
+@media (min-width: 40rem) { .now-item:nth-child(2) { border-top: 0; padding-top: 0; } }
+/* Grupos de un tema: regla fina de ancho completo, no la regla fuerte de sección. */
+.section > .row.group { border-top: var(--hair) solid var(--rule-mid); padding-top: var(--s-5); }
+.works li:first-child { border-top: 0; padding-top: 0; }
+/* El enlace al tema desde "Ahora" y "También en" no compite con el acento de la página. */
+.now-item .to a, .works .also a { color: var(--ink-soft); text-decoration-color: var(--rule-mid); }
+.now-item .to a:hover, .works .also a:hover { color: var(--ink); text-decoration-color: var(--ink); }
+
+/* ---------- 17. Ajustes tras comentarios de Omar (ronda 1) ---------- */
+/* Foto: ocupa el riel completo en escritorio, visible en móvil. */
+.photo { width: min(15rem, 62vw); }
+@media (min-width: 56rem) { .photo { width: 100%; max-width: 17rem; } }
+/* Ficha: párrafo explicativo sin etiqueta, como entrada bajo los datos de publicación. */
+.record-plain { margin-top: var(--s-6); max-width: var(--measure); }
+.record-plain p + p { margin-top: var(--s-4); }
+
+/* ---------- 18. Ronda 2: fondo aprobado, legibilidad, menos monoespaciada ---------- */
+/* FONDO: blanco neutro suave, aprobado por Omar (18 sep 2026). */
+:root {
+  --paper: #FAFAFA; --paper-deep: #EFEFEE;
+  --ink: #1C1C1D; --ink-soft: #38383A; --ink-muted: #5B5B5E;
+  --rule: #DDDDDB; --rule-mid: #B1B1AE; --rule-strong: #1C1C1D;
+}
+html { background: var(--paper); }
+
+/* Texto secundario: más oscuro, un punto más grande y apenas más peso. */
+:root { --fs-secondary: 1rem; --fw-secondary: 430; }
+@media (min-width: 56rem) { :root { --fs-secondary: 1.0625rem; } }
+.now-item p, .theme-index .q, .works .note, .works .who, .intro-after, .abstract,
+.cite-block .ref, .now-inline p {
+  font-size: var(--fs-secondary); font-weight: var(--fw-secondary); line-height: 1.55; color: var(--ink-soft);
+}
+.now-item h3 { font-size: 1.375rem; }
+.works .who { color: var(--ink-soft); }
+
+/* Monoespaciada solo para datos de catálogo (años, revistas, tipos, DOI, etiquetas de sección).
+   Estados, enlaces a temas, pies y avisos pasan a la serif. */
+.now-item .status, .now-inline .status {
+  font-family: var(--font-serif); font-style: italic; font-size: var(--fs-small); color: var(--ink-muted); letter-spacing: 0;
+}
+.now-item .to, .works .also, .more {
+  font-family: var(--font-serif); font-size: var(--fs-small); letter-spacing: 0;
+}
+.works .also { color: var(--ink-muted); }
+.more { margin-top: var(--s-4); }
+.list-intro { font-size: var(--fs-secondary); color: var(--ink-soft); max-width: var(--measure); }
+.footer-cols li, .footer-cols p { font-family: var(--font-serif); font-size: var(--fs-small); line-height: 1.6; letter-spacing: 0; }
+
+/* Inicio en móvil: foto contenida, entrada breve, llegada rápida a "Ahora". */
+.intro-block .intro { max-width: 30em; }
+.intro-block .intro-after { font-size: var(--fs-lead); line-height: var(--lh-lead); color: var(--ink-soft); font-weight: var(--fw-secondary); max-width: 34em; margin-top: var(--s-4); }
+.photo-frame .placeholder { color: var(--ink-muted); }
+@media (max-width: 55.99rem) { .photo-frame .placeholder { font-size: 0.625rem; } }
+@media (max-width: 55.99rem) {
+  .intro-top { padding-top: var(--s-6) !important; }
+  .photo { width: 6.5rem; }
+  .intro-block .intro-after { font-size: var(--fs-secondary); line-height: 1.55; }
+  .section { margin-top: var(--s-8); }
+}
+
+/* ---------- 19. Portada: foto apaisada sobre la entrada ---------- */
+/* Omar prefiere el encuadre horizontal original (la pizarra con el perro entra completa),
+   así que la foto sale del riel y se apoya sobre el texto, alineada con él. */
+.photo--wide { width: 100%; max-width: 34rem; margin-bottom: var(--s-5); }
+.photo--wide .photo-frame { aspect-ratio: 1690 / 931; }
+@media (max-width: 55.99rem) { .photo--wide { width: 100%; max-width: none; margin-bottom: var(--s-4); } }
+
+/* ---------- 20. Cuaderno (20 sep 2026, con la primera nota) ---------- */
+/* DECISIONES_DISENO.md §2: serif más grande, sin columna de metadata, fecha en serif cursiva.
+   .note-body está pensado para el HTML que genera Markdown (p, blockquote, em, a, img). */
+.note-head { padding-top: var(--s-8); row-gap: var(--s-3); }
+.note-date { font-style: italic; font-size: var(--fs-lead); color: var(--ink-muted); }
+.note-body { font-size: clamp(1.1875rem, 1.1rem + 0.45vw, 1.375rem); line-height: 1.58; max-width: 33em; text-wrap: pretty; }
+.note-body > * + * { margin-top: 1.1em; }
+.note-body blockquote { margin-bottom: 2.2em; padding-left: var(--s-4); border-left: var(--hair) solid var(--rule-mid); color: var(--ink-soft); font-size: 0.92em; line-height: 1.5; }
+.note-body blockquote p + p { margin-top: 0.35em; }
+.note-body img { margin-block: 1.6em; }
+.note-foot { margin-top: var(--s-8); padding-top: var(--s-4); border-top: var(--hair) solid var(--rule); max-width: var(--measure-wide); display: flex; flex-direction: column; gap: var(--s-2); font-size: var(--fs-small); }
+.note-foot a { color: var(--ink-soft); text-decoration-color: var(--rule-mid); }
+.note-foot a:hover { color: var(--ink); text-decoration-color: var(--ink); }
+
+/* Lista de notas: índice del Cuaderno y bloque «Del cuaderno» de la portada. */
+.notes li { padding-block: var(--s-4); border-top: var(--hair) solid var(--rule); }
+.notes li:first-child { border-top: 0; padding-top: 0; }
+.notes .d { display: block; font-style: italic; font-size: var(--fs-small); color: var(--ink-muted); }
+.notes .t { font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem); line-height: var(--lh-tight); font-weight: 500; letter-spacing: -0.01em; }
+.notes .t a { color: var(--ink); text-decoration: none; }
+.notes .t a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.15em; text-decoration-color: var(--accent-mark); }
+
+/* ---------- 21. Construcción del sitio (septiembre de 2026) ---------- */
+/* Arranques de página, que en las maquetas iban como estilos en línea. */
+.page-head { padding-top: var(--s-8); row-gap: var(--s-4); }
+.page-intro { margin-top: var(--s-6); }
+.home-intro { padding-top: var(--s-8); row-gap: var(--s-5); }
+.list-gap { margin-top: var(--s-6); }
+.note-wrap { margin-top: var(--s-7); }
+.note-foot .back { margin-top: var(--s-3); }
+.footer-name { font-size: 1.0625rem; }
+.eyebrow .num { color: var(--accent); }
+.record-kind a, .access .doi { color: var(--ink-muted); }
+.lang .off { color: var(--ink-muted); }
+.record-note { margin-top: var(--s-1); font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--ink-muted); }
+.record-plain p { font-size: var(--fs-lead); line-height: var(--lh-lead); }
+
+/* Publicaciones: bloque plegado de reseñas y editoriales. */
+.fold { margin-top: var(--s-5); }
+.fold > summary { cursor: pointer; width: fit-content; font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--accent); padding-block: var(--s-2); }
+.fold > .cat { margin-top: var(--s-2); border-top: var(--hair) solid var(--rule); }
+
+/* Charlas: dos temas en una misma entrada, uno por línea. */
+.cat .t + .t { margin-top: var(--s-1); }
+.cat .soon { color: var(--ink-soft); }
+
+/* Sobre mí: datos de contacto bajo «Formación y afiliación». */
+.contact-list { margin-top: var(--s-5); font-size: var(--fs-small); line-height: 1.7; color: var(--ink-soft); }
+
+/* Imágenes dentro de una nota del Cuaderno. */
+.note-body figure { margin-block: 1.6em; }
+.note-body figcaption { margin-top: var(--s-2); font-size: var(--fs-small); font-style: italic; color: var(--ink-muted); }
+.note-body h2 { font-size: var(--fs-h2); line-height: var(--lh-tight); font-weight: 500; margin-top: 1.8em; }
+.note-body ul, .note-body ol { padding-left: 1.2em; }
+.note-body ul { list-style: disc; }
+.note-body ol { list-style: decimal; }
+
+/* Un DOI largo no debe ensanchar la página en el teléfono. */
+.access .doi, .access .doi a { white-space: normal; overflow-wrap: anywhere; }
+.cite-block .ref { overflow-wrap: anywhere; }
+/* El BibTeX se parte dentro de su caja en lugar de ensanchar la página. */
+.cite-block details { max-width: 100%; }
+.cite-block pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* ---------- 22. Índice del Cuaderno (ronda 11): fecha en el riel, título y una línea de resumen ---------- */
+.section > .row.note-row { row-gap: var(--s-2); }
+.section > .row.note-row + .note-row { margin-top: var(--s-6); border-top-color: var(--rule); }
+.note-row-date { font-style: italic; font-size: var(--fs-small); color: var(--ink-muted); padding-top: 0.45em; }
+.note-row .t { font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem); line-height: var(--lh-tight); font-weight: 500; letter-spacing: -0.01em; }
+.note-row .t a { color: var(--ink); text-decoration: none; }
+.note-row .t a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.15em; text-decoration-color: var(--accent-mark); }
+.note-row-sum { margin-top: var(--s-2); font-size: var(--fs-secondary); font-weight: var(--fw-secondary); line-height: 1.55; color: var(--ink-soft); max-width: var(--measure); }
+@media (max-width: 55.99rem) { .note-row-date { padding-top: 0; } }

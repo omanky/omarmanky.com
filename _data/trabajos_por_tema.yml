@@ -1,0 +1,392 @@
+# Trabajos de cada página de tema, en el orden en que se muestran.
+# Archivo generado por herramientas/exportar_al_sitio.py. No se edita a mano.
+trabajo-organizacion-y-conflicto:
+  - slug: "huelgas-masivas-sin-institucionalizacion"
+    anio: "En prensa"
+    titulo_html: "Huelgas masivas sin institucionalización: Perú, 1994–2025"
+    titulo_lang: null
+    quien: "con Valentina Linares"
+    meta_html: "<span class=\"status\">En prensa</span> · Artículo · <i>Estudios Sociológicos</i>"
+    tambien:
+      - "mineria-agroexportacion-y-territorio"
+  - slug: "2026-labor-unions-in-latin-america"
+    anio: "2026"
+    titulo_html: "Labor unions in Latin America: political action and organizational innovation"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Capítulo · en <i lang=\"en\">Handbook of Latin American Politics</i>, Edward Elgar"
+    tambien: []
+  - slug: "2024-with-the-law-behind-us"
+    anio: "2024"
+    titulo_html: "‘With the law behind us’: Resource mobilisation and legal repertoires in the Peruvian labour movement"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Artículo · <i lang=\"en\">Economic and Industrial Democracy</i> 45(3)"
+    tambien: []
+  - slug: "2023-precariedad-y-resistencias"
+    anio: "2023"
+    titulo_html: "Perú: precariedad y resistencias desarticuladas"
+    titulo_lang: null
+    quien: "con Sergio Saravia"
+    meta_html: "Capítulo · en <i>Trabajo y luchas sociales en América Latina</i>, LOM"
+    tambien:
+      - "mineria-agroexportacion-y-territorio"
+  - slug: "2023-nuevas-perspectivas-organizaciones"
+    anio: "2023"
+    titulo_html: "Nuevas perspectivas sobre las organizaciones de trabajadores en Perú: un análisis sistemático"
+    titulo_lang: null
+    quien: "con Micaela Reynoso"
+    meta_html: "Capítulo · en <i>Las personas y el mundo del trabajo peruano</i>, Palestra"
+    tambien: []
+  - slug: "2023-catalogo-sindicalismo"
+    anio: "2023"
+    titulo_html: "Catálogo bibliográfico de publicaciones sobre Sindicalismo en el Perú"
+    titulo_lang: null
+    quien: null
+    meta_html: "Conjunto de datos · acceso abierto"
+    tambien: []
+  - slug: "2021-organizaciones-de-trabajadores"
+    anio: "2021"
+    titulo_html: "Organizaciones de trabajadores en Perú: un catálogo sobre lo escrito desde 2010"
+    titulo_lang: null
+    quien: null
+    meta_html: "Documento de trabajo · Cuaderno de Trabajo 61, PUCP · acceso abierto"
+    tambien: []
+  - slug: "2021-rostros-del-trabajo"
+    anio: "2021"
+    titulo_html: "Rostros del trabajo: desigualdad, poder e identidad en el Perú contemporáneo"
+    titulo_lang: null
+    quien: null
+    meta_html: "Libro editado · Universidad del Pacífico"
+    tambien: []
+  - slug: "2019-marchas-e-incendios"
+    anio: "2019"
+    titulo_html: "Marchas e incendios: la política de la heterogeneidad en el mundo laboral peruano"
+    titulo_lang: null
+    quien: null
+    meta_html: "Capítulo · en <i>Aproximaciones al Perú de hoy desde las ciencias sociales</i>, Universidad del Pacífico · acceso abierto"
+    tambien: []
+  - slug: "2019-work-and-labor-movements"
+    anio: "2019"
+    titulo_html: "Work and Labor Movements in Latin America"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Entrada de enciclopedia · <i lang=\"en\">Oxford Research Encyclopedia of Politics</i>"
+    tambien: []
+  - slug: "2018-resource-mobilisation"
+    anio: "2018"
+    titulo_html: "Resource Mobilisation and Precarious Workers’ Organisations: An Analysis of the Chilean Subcontracted Mineworkers’ Unions"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Artículo · <i lang=\"en\">Work, Employment and Society</i> 32(3)"
+    tambien:
+      - "mineria-agroexportacion-y-territorio"
+  - slug: "2017-un-mapa-de-los-aliados"
+    anio: "2017"
+    titulo_html: "Un mapa de los aliados: Precariedad laboral, sindicalización y movilización de recursos en el sector textil"
+    titulo_lang: null
+    quien: null
+    meta_html: "Capítulo · en <i>Trabajo y sociedad</i>, O. Manky (ed.), CISEPA-PUCP"
+    tambien: []
+  - slug: "2017-trabajo-y-sociedad"
+    anio: "2017"
+    titulo_html: "Trabajo y sociedad: estudios sobre el mundo del trabajo en el Perú"
+    titulo_lang: null
+    quien: null
+    meta_html: "Libro editado · CISEPA-PUCP"
+    tambien: []
+  - slug: "2017-balance-estudios-laborales"
+    anio: "2017"
+    titulo_html: "Un balance de los Estudios Laborales en Perú: 1990-2016"
+    titulo_lang: null
+    quien: "con Alejandra Cueto y Sergio Saravia"
+    meta_html: "Capítulo · en <i>Trabajo y sociedad</i>, CISEPA-PUCP"
+    tambien: []
+  - slug: "2014-democracia-crecimiento-sindicalismo"
+    anio: "2014"
+    titulo_html: "Democracia, crecimiento económico y sindicalismo en el Perú del siglo XXI. Continuidades y rupturas"
+    titulo_lang: null
+    quien: null
+    meta_html: "Artículo · <i>Revista Latinoamericana de Estudios del Trabajo</i> 19(31)"
+    tambien: []
+  - slug: "2011-el-dia-despues-del-tsunami"
+    anio: "2011"
+    titulo_html: "El día después del tsunami. Notas para comprender a los sindicatos obreros peruanos en las últimas décadas del siglo XX"
+    titulo_lang: null
+    quien: null
+    meta_html: "Artículo · <i>Debates en Sociología</i> 36 · acceso abierto"
+    tambien: []
+mineria-agroexportacion-y-territorio:
+  - slug: "huelgas-masivas-sin-institucionalizacion"
+    anio: "En prensa"
+    titulo_html: "Huelgas masivas sin institucionalización: Perú, 1994–2025"
+    titulo_lang: null
+    quien: "con Valentina Linares"
+    meta_html: "<span class=\"status\">En prensa</span> · Artículo · <i>Estudios Sociológicos</i>"
+    tambien:
+      - "trabajo-organizacion-y-conflicto"
+  - slug: "2026-communities-of-struggle"
+    anio: "2026"
+    titulo_html: "Communities of Struggle: Spatializing Power Resources in Peru’s Agrarian Strike"
+    titulo_lang: "en"
+    quien: "con Micaela Reynoso"
+    meta_html: "Artículo · <i lang=\"en\">British Journal of Industrial Relations</i> 64(1)"
+    tambien: []
+  - slug: "2026-mining-trade-unions-collective-bargaining"
+    anio: "2026"
+    titulo_html: "Mining, trade unions, and collective bargaining"
+    titulo_lang: "en"
+    quien: "con Carlos Mejía"
+    meta_html: "Capítulo · en <i lang=\"en\">Mining and the Peruvian State</i>, Routledge"
+    tambien: []
+  - slug: "2025-scaling-the-commanding-heights"
+    anio: "2025"
+    titulo_html: "Scaling the commanding heights of the economy?: a century of mineworkers’ spatial projects in the Peruvian Andes"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Capítulo · en <i lang=\"en\">Handbook of Labour Geography</i>, Edward Elgar"
+    tambien: []
+  - slug: "2024-ecos-efimeros-de-rebelion"
+    anio: "2024"
+    titulo_html: "Ecos efímeros de rebelión. Innovación táctica en el Paro Agrario peruano de 2020"
+    titulo_lang: null
+    quien: "con Micaela Reynoso y Aroma Calderón"
+    meta_html: "Artículo · <i>Apuntes</i> 51(97) · acceso abierto"
+    tambien: []
+  - slug: "2024-gran-mineria-del-cobre"
+    anio: "2024"
+    titulo_html: "Etapas y transformaciones del movimiento sindical de los trabajadores de la gran minería del cobre (GMC)"
+    titulo_lang: null
+    quien: "con Mauricio Muñoz"
+    meta_html: "Capítulo · en <i>Sindicalismos en Chile</i>, FCE Chile"
+    tambien: []
+  - slug: "2024-reading-peru-from-chile"
+    anio: "2024"
+    titulo_html: "Reading Peru from Chile: examining mining unionism in the twentieth and twenty-first centuries"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Capítulo · en <i lang=\"en\">The Labor of Extraction in Latin America</i>"
+    tambien: []
+  - slug: "2024-reprimarizacion-y-extractivismo"
+    anio: "2024"
+    titulo_html: "Reprimarización y extractivismo: transformaciones del trabajo en la era global"
+    titulo_lang: null
+    quien: "de Juan Carlos Celis Ospina y Omar Manky"
+    meta_html: "Capítulo · en <i>Tratado latinoamericano de sociología del trabajo II</i>, CLACSO · acceso abierto"
+    tambien: []
+  - slug: "2023-precariedad-y-resistencias"
+    anio: "2023"
+    titulo_html: "Perú: precariedad y resistencias desarticuladas"
+    titulo_lang: null
+    quien: "con Sergio Saravia"
+    meta_html: "Capítulo · en <i>Trabajo y luchas sociales en América Latina</i>, LOM"
+    tambien:
+      - "trabajo-organizacion-y-conflicto"
+  - slug: "2022-inversiones-chinas"
+    anio: "2022"
+    titulo_html: "Report on Labor Relations in Companies with Chinese Investments in Peru. The case of the Shougang and Chinalco mining companies"
+    titulo_lang: "en"
+    quien: "de Juan Dolores, Omar Manky y E. Sousa"
+    meta_html: "Informe · Perú Equidad y Solidarity Center · acceso abierto"
+    tambien: []
+  - slug: "2020-relaciones-comunitarias"
+    anio: "2020"
+    titulo_html: "El contexto social de las relaciones comunitarias: reflexiones sobre su análisis"
+    titulo_lang: null
+    quien: null
+    meta_html: "Capítulo · en <i>Relaciones comunitarias</i>, Pearson"
+    tambien: []
+  - slug: "2020-end-of-mining-labor-struggles"
+    anio: "2020"
+    titulo_html: "The end of mining labor struggles? The changing dynamics of labor in Latin America"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Artículo · <i lang=\"en\">The Extractive Industries and Society</i> 7(3)"
+    tambien: []
+  - slug: "2019-mineros-en-movimiento"
+    anio: "2019"
+    titulo_html: "Mineros en movimiento: patrones residenciales y cultura sindical en perspectiva comparada"
+    titulo_lang: null
+    quien: null
+    meta_html: "Artículo · <i>Debates en Sociología</i> 49 · acceso abierto"
+    tambien: []
+  - slug: "2019-liderazgos-precarios"
+    anio: "2019"
+    titulo_html: "Liderazgos precarios: Organización y líderes sindicales en perspectiva comparada"
+    titulo_lang: null
+    quien: null
+    meta_html: "Artículo · <i>Latin American Research Review</i> 54(4) · acceso abierto"
+    tambien: []
+  - slug: "2019-limites-del-clasismo"
+    anio: "2019"
+    titulo_html: "¿Los límites del clasismo?: Identidad y vínculos entre trabajadores regulares y precarios. Chile y Perú en perspectiva comparada"
+    titulo_lang: null
+    quien: null
+    meta_html: "Artículo · <i>Revista Internacional de Sociología</i> 77(2) · acceso abierto"
+    tambien: []
+  - slug: "2018-part-time-miners"
+    anio: "2018"
+    titulo_html: "Part-Time Miners: Labor Segmentation and Collective Action in the Peruvian Mining Industry"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Artículo · <i lang=\"en\">Latin American Perspectives</i> 45(5)"
+    tambien: []
+  - slug: "2018-resource-mobilisation"
+    anio: "2018"
+    titulo_html: "Resource Mobilisation and Precarious Workers’ Organisations: An Analysis of the Chilean Subcontracted Mineworkers’ Unions"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Artículo · <i lang=\"en\">Work, Employment and Society</i> 32(3)"
+    tambien:
+      - "trabajo-organizacion-y-conflicto"
+  - slug: "2017-from-towns-to-hotels"
+    anio: "2017"
+    titulo_html: "From Towns to Hotels: Changes in Mining Accommodation Regimes and Their Effects on Labour Union Strategies"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Artículo · <i lang=\"en\">British Journal of Industrial Relations</i> 55(2)"
+    tambien: []
+  - slug: "2017-el-lugar-importa"
+    anio: "2017"
+    titulo_html: "El lugar importa: efectos de la movilidad en las estrategias sindicales"
+    titulo_lang: null
+    quien: null
+    meta_html: "Artículo · <i>Revista Mexicana de Sociología</i> 79(1) · acceso abierto"
+    tambien: []
+  - slug: "2013-recordando-al-patron"
+    anio: "2013"
+    titulo_html: "Recordando al patrón: memoria organizacional y conflictos laborales. El caso de una empresa minera peruana"
+    titulo_lang: null
+    quien: null
+    meta_html: "Capítulo · en <i>Sombras coloniales y globalización en el Perú de hoy</i>"
+    tambien: []
+tecnologia-y-trabajo:
+  - slug: "silent-voices-in-the-city"
+    anio: "En prensa"
+    titulo_html: "Silent Voices in the City? The Challenge of Collective Action in Lima’s Gig Economy"
+    titulo_lang: "en"
+    quien: "con Natalia Mogollón"
+    meta_html: "<span class=\"status\">En prensa</span> · Capítulo · University of Illinois Press"
+    tambien: []
+  - slug: "2026-ia-en-el-peru-urbano"
+    anio: "2026"
+    titulo_html: "IA en el Perú urbano · Trabajo, ambivalencia y desconexión"
+    titulo_lang: null
+    quien: null
+    meta_html: "Micrositio · acceso abierto"
+    tambien: []
+  - slug: "2026-reimagining-work-security"
+    anio: "2026"
+    titulo_html: "Reimagining Work Security in Latin America’s Platform Economy: Workers’ Strategies Amid Urban Violence"
+    titulo_lang: "en"
+    quien: null
+    meta_html: "Artículo · <i lang=\"en\">New Technology, Work and Employment</i> 41(1)"
+    tambien: []
+  - slug: "2026-beyond-cultural-adaptation"
+    anio: "2026"
+    titulo_html: "Beyond cultural adaptation: coloniality and AI adoption in Latin American business education"
+    titulo_lang: "en"
+    quien: "con Nattaly López"
+    meta_html: "Capítulo · en <i lang=\"en\">The Routledge Companion to Cross-Cultural Management</i>, 2.ª ed."
+    tambien:
+      - "universidad-y-conocimiento"
+  - slug: "2025-modo-beta"
+    anio: "2025"
+    titulo_html: "Trabajo y tecnología en modo Beta: herramientas para regular la gestión algorítmica en el contexto laboral peruano"
+    titulo_lang: null
+    quien: null
+    meta_html: "Documento de política · <i>Agenda 2026</i>, CIUP · acceso abierto"
+    tambien: []
+  - slug: "2025-doble-desafio-tecnologico"
+    anio: "2025"
+    titulo_html: "Doble desafío tecnológico: análisis de la exposición a la automatización tradicional y a la inteligencia artificial generativa en el empleo peruano, utilizando datos de la ENAHO 2024"
+    titulo_lang: null
+    quien: null
+    meta_html: "Informe · INEI"
+    tambien: []
+  - slug: "2024-didi-latin-america"
+    anio: "2024"
+    titulo_html: "How DiDi Chuxing Adapts to Latin America’s Era of Digital Platforms"
+    titulo_lang: "en"
+    quien: "con Natalia Mogollón"
+    meta_html: "Informe · Carnegie Endowment for International Peace · acceso abierto"
+    tambien: []
+  - slug: "2024-negociando-la-ruta"
+    anio: "2024"
+    titulo_html: "Negociando la ruta: informalidad y precariedad en el trabajo de plataformas peruano"
+    titulo_lang: null
+    quien: "con Natalia Mogollón y Vanessa Azañedo"
+    meta_html: "Artículo · <i>Estudios Sociológicos</i> 42 · acceso abierto"
+    tambien: []
+universidad-y-conocimiento:
+  - slug: "2026-ni-calco-ni-copia"
+    anio: "2026"
+    titulo_html: "Ni calco ni copia: reforma universitaria y capitalismo académico a la peruana"
+    titulo_lang: null
+    quien: "con Nattaly López"
+    meta_html: "Capítulo · en <i>Perú global 2</i>, Planeta"
+    tambien: []
+  - slug: "2026-beyond-cultural-adaptation"
+    anio: "2026"
+    titulo_html: "Beyond cultural adaptation: coloniality and AI adoption in Latin American business education"
+    titulo_lang: "en"
+    quien: "con Nattaly López"
+    meta_html: "Capítulo · en <i lang=\"en\">The Routledge Companion to Cross-Cultural Management</i>, 2.ª ed."
+    tambien:
+      - "tecnologia-y-trabajo"
+  - slug: "2025-capitalismo-academico"
+    anio: "2025"
+    titulo_html: "La construcción del capitalismo académico: Negociando la reforma universitaria en Perú (2014–2023)"
+    titulo_lang: null
+    quien: "con Nattaly López"
+    meta_html: "Artículo · <i>Latin American Research Review</i> 60(2) · acceso abierto"
+    tambien: []
+  - slug: "2024-contested-modernisation"
+    anio: "2024"
+    titulo_html: "The contested modernisation of Peruvian universities"
+    titulo_lang: "en"
+    quien: "con Juan Dolores"
+    meta_html: "Capítulo · en <i lang=\"en\">Research Handbook on Academic Labour Markets</i>, Edward Elgar"
+    tambien: []
+  - slug: "2024-desgaste-de-la-democracia"
+    anio: "2024"
+    titulo_html: "El desgaste de la democracia y el fracaso de la universidad peruana"
+    titulo_lang: null
+    quien: "con Nattaly López"
+    meta_html: "Capítulo · en <i>Democracia asaltada</i>, Universidad del Pacífico"
+    tambien: []
+  - slug: "2024-broad-and-alien-is-the-field"
+    anio: "2024"
+    titulo_html: "Broad and alien is the field: dependence and heterogeneity in management research practices in Latin America"
+    titulo_lang: "en"
+    quien: "con Nattaly López"
+    meta_html: "Artículo · <i lang=\"en\">Critical Perspectives on International Business</i> 20(5)"
+    tambien: []
+  - slug: "2023-universidad-y-politica"
+    anio: "2023"
+    titulo_html: "Universidad y política en el Perú: un siglo de mitos, proyectos y fracasos"
+    titulo_lang: null
+    quien: "de Noelia Chávez y Omar Manky"
+    meta_html: "Libro · Planeta, colección Perú breve"
+    tambien: []
+  - slug: "2022-from-pure-academics"
+    anio: "2022"
+    titulo_html: "From pure academics to transformative scholars? The crisis of the “ideal academic” in a Peruvian university"
+    titulo_lang: "en"
+    quien: "con Sergio Saravia"
+    meta_html: "Artículo · <i lang=\"en\">Gender, Work &amp; Organization</i> 29(4)"
+    tambien: []
+  - slug: "2022-subversive-entrepreneurs"
+    anio: "2022"
+    titulo_html: "Subversive Entrepreneurs: Business Agency and Commodification of Peruvian Higher Education (1992–2012)"
+    titulo_lang: "en"
+    quien: "con Juan Dolores"
+    meta_html: "Artículo · <i lang=\"en\">Latin American Perspectives</i> 49(3)"
+    tambien: []
+  - slug: "2021-negotiated-marketization"
+    anio: "2021"
+    titulo_html: "Negotiated Marketization: Public Universities and Higher Education Markets in Peru (1990–2014)"
+    titulo_lang: "en"
+    quien: "con Juan Dolores"
+    meta_html: "Artículo · <i lang=\"en\">Comparative Education Review</i> 65(2)"
+    tambien: []

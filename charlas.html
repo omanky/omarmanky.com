@@ -1,0 +1,35 @@
+---
+layout: default
+title: Charlas
+description: "Algunas presentaciones públicas: ponencias en congresos, charlas invitadas, mesas, una estancia de docencia y algún podcast."
+permalink: /charlas/
+seccion: charlas
+---
+
+  <div class="wrap row page-head">
+    <h1 class="main-wide page-title">Charlas</h1>
+  </div>
+
+  <div class="wrap row page-intro">
+    <div class="main prose">
+      <p class="lead">Algunas presentaciones públicas: ponencias en congresos, charlas invitadas, mesas, una estancia de docencia y algún podcast.</p>
+    </div>
+  </div>
+
+  <section class="section wrap" aria-label="Lista de charlas">
+    <div class="row">
+      <ul class="main-wide cat">
+        {%- for c in site.data.charlas %}
+        <li>
+          <span class="y">{{ c.anio }}</span>
+          <div>
+            {%- for t in c.temas_html %}
+            <p class="t">{{ t }}</p>
+            {%- endfor %}
+            <p class="m">{% if c.proximo %}<span class="soon">Próximo</span> · {% endif %}{{ c.evento }} · {{ c.lugar }}</p>
+          </div>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>

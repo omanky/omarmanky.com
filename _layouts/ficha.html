@@ -1,0 +1,80 @@
+---
+layout: default
+---
+{%- assign cuerpo = content | strip -%}
+{%- assign e = page.enlaces %}
+  <article>
+    <header class="wrap row record-head">
+      <p class="rail record-kind">
+        <span class="yr">{{ page.anio_lista }}</span>
+        <a href="{{ '/publicaciones/' | relative_url }}">Publicaciones</a> / {{ page.tipo }}
+      </p>
+      <div class="main-wide">
+        <h1 class="record-title"{% if page.titulo_lang %} lang="{{ page.titulo_lang }}"{% endif %}>{{ page.titulo_html }}</h1>
+        <p class="record-authors">{{ page.autores_linea }}</p>
+        <p class="record-venue">{% if page.tipo == "Capítulo" %}En {% endif %}{{ page.lugar_html }}</p>
+        {%- if page.nota_lugar %}
+        <p class="record-note">{{ page.nota_lugar }}</p>
+        {%- endif %}
+        {%- if cuerpo != "" %}
+        <div class="record-plain">
+{{ content }}
+        </div>
+        {%- endif %}
+        {%- if e.pdf or e.en_linea or e.pagina or e.doi %}
+        <p class="access">
+          {%- if e.pdf %}
+          <a class="oa" href="{{ e.pdf }}">Leer el PDF</a>
+          {%- endif %}
+          {%- if e.en_linea %}
+          <a {% if page.acceso_abierto %}class="oa" {% endif %}href="{{ e.en_linea }}">Ver en línea ↗</a>
+          {%- endif %}
+          {%- if e.pagina %}
+          <a href="{{ e.pagina }}">{% if e.pagina_es_revista %}Página de la revista{% else %}Página de la editorial{% endif %} ↗</a>
+          {%- endif %}
+          {%- if e.doi %}
+          <span class="doi">DOI <a href="https://doi.org/{{ e.doi }}">{{ e.doi }}</a></span>
+          {%- endif %}
+        </p>
+        {%- endif %}
+      </div>
+    </header>
+
+    <section class="section wrap" aria-labelledby="f-citar">
+      <div class="row">
+        <h2 class="rail label label--mark" id="f-citar">Cómo citar</h2>
+        <div class="main cite-block">
+          <p class="ref">{{ page.cita_html }}</p>
+          <details>
+            <summary>BibTeX</summary>
+<pre>{{ page.bibtex | escape }}</pre>
+          </details>
+        </div>
+      </div>
+    </section>
+{% if page.temas.size > 0 %}
+    <section class="section-sub wrap" aria-labelledby="f-temas">
+      <div class="row">
+        <h2 class="rail label" id="f-temas">Temas</h2>
+        <div class="main-wide cross">
+          {% include enlaces-temas.html temas=page.temas %}
+        </div>
+      </div>
+    </section>
+{% endif %}
+{%- if page.relacionados.size > 0 %}
+    <section class="section-sub wrap" aria-labelledby="f-rel">
+      <div class="row">
+        <h2 class="rail label" id="f-rel">Relacionados</h2>
+        <ul class="main-wide cat">
+          {%- for s in page.relacionados %}
+          {%- assign r = site.publicaciones | where: "slug", s | first %}
+          {%- if r %}
+          {% include fila-publicacion.html doc=r %}
+          {%- endif %}
+          {%- endfor %}
+        </ul>
+      </div>
+    </section>
+{% endif %}
+  </article>

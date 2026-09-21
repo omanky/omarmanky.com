@@ -1,0 +1,47 @@
+# omarmanky.com · configuración de Jekyll (compatible con GitHub Pages, sin paso de build propio)
+
+title: Omar Manky
+description: "Omar Manky, sociólogo del trabajo en Lima. Temas, publicaciones y un cuaderno de notas."
+url: "https://omarmanky.com"
+baseurl: ""
+lang: es
+timezone: America/Lima
+
+# Mientras el sitio no esté publicado, todas las páginas piden a los buscadores que no las indexen
+# y robots.txt cierra el paso. El día de la publicación: cambiar a false. Es el único cambio.
+noindex: true
+
+permalink: pretty
+future: true          # una nota fechada hoy se publica aunque el reloj del servidor vaya en otra zona horaria
+
+plugins:
+  - jekyll-sitemap
+
+collections:
+  publicaciones:
+    output: true
+    permalink: /publicaciones/:name/
+  cuaderno:
+    output: true
+    permalink: /cuaderno/:slug/
+
+defaults:
+  - scope: { path: "", type: "publicaciones" }
+    values: { layout: "ficha", seccion: "publicaciones" }
+  - scope: { path: "", type: "cuaderno" }
+    values: { layout: "nota", seccion: "cuaderno" }
+
+# El texto de las notas se publica tal como se escribió: sin comillas ni rayas «inteligentes».
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  typographic_symbols: { hellip: "...", mdash: "---", ndash: "--", laquo: "<<", raquo: ">>", laquo_space: "<< ", raquo_space: " >>" }
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle

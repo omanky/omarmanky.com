@@ -1,0 +1,11 @@
+{%- assign e = include.item -%}
+<li>
+  <span class="y">{{ e.anio }}</span>
+  <div>
+    <p class="t"><a href="{{ e.url }}">{{ e.titulo }}</a></p>
+    <p class="m">{% if include.tipo_en_linea %}{{ e.tipo }} · {% else %}<span class="k-inline k">{{ e.tipo }} · </span>{% endif %}{% if e.autores_cortos %}{{ e.autores_cortos }} · {% endif %}{{ e.medio_html }}</p>
+  </div>
+  {%- unless include.tipo_en_linea %}
+  <span class="k-col">{{ e.tipo }}</span>
+  {%- endunless %}
+</li>

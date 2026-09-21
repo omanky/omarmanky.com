@@ -1,0 +1,37 @@
+---
+layout: null
+permalink: /cuaderno/feed.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+{%- assign notas = site.cuaderno | sort: "date" | reverse %}
+{%- assign cuaderno = site.pages | where: "url", "/cuaderno/" | first %}
+{%- comment %} Las rutas internas del cuerpo de una nota (imágenes, enlaces a otras notas) empiezan por «/»: en el feed van absolutas. {%- endcomment %}
+{%- capture src_absoluto %}src="{{ site.url }}{{ site.baseurl }}/{% endcapture %}
+{%- capture href_absoluto %}href="{{ site.url }}{{ site.baseurl }}/{% endcapture %}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es">
+  <title>Cuaderno · {{ site.title | xml_escape }}</title>
+  <subtitle>{{ cuaderno.description | xml_escape }}</subtitle>
+  <id>{{ '/cuaderno/' | absolute_url }}</id>
+  <link rel="alternate" type="text/html" href="{{ '/cuaderno/' | absolute_url }}"/>
+  <link rel="self" type="application/atom+xml" href="{{ page.url | absolute_url }}"/>
+  <updated>{% if notas.size > 0 %}{{ notas.first.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}</updated>
+  <author>
+    <name>Omar Manky</name>
+    <uri>{{ '/' | absolute_url }}</uri>
+  </author>
+  {%- for n in notas limit: 20 %}
+  <entry>
+    <title type="html">{{ n.title | xml_escape }}</title>
+    <link rel="alternate" type="text/html" href="{{ n.url | absolute_url }}"/>
+    <id>{{ n.url | absolute_url }}</id>
+    <published>{{ n.date | date_to_xmlschema }}</published>
+    <updated>{{ n.date | date_to_xmlschema }}</updated>
+    {%- assign linea = n.resumen | default: n.extracto %}
+    {%- if linea %}
+    <summary>{{ linea | xml_escape }}</summary>
+    {%- endif %}
+    <content type="html" xml:base="{{ n.url | absolute_url }}">{{ n.content | replace: 'src="/', src_absoluto | replace: 'href="/', href_absoluto | xml_escape }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

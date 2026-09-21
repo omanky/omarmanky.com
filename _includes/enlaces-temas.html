@@ -1,0 +1,7 @@
+{%- comment -%} Enlaces a temas con su marcador de color. Uso: {% include enlaces-temas.html temas=page.temas etiqueta="p" %} {%- endcomment -%}
+{%- for slug in include.temas -%}
+{%- assign t = site.data.temas | where: "slug", slug | first -%}
+{%- if t %}
+{% if include.parrafos %}<p>{% endif %}<a href="{{ '/temas/' | append: t.slug | append: '/' | relative_url }}"><span class="mark mark--{{ t.acento }}" aria-hidden="true"></span>{{ t.nombre }}</a>{% if include.parrafos %}</p>{% endif %}
+{%- endif -%}
+{%- endfor -%}

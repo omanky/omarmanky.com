@@ -1,0 +1,39 @@
+---
+layout: default
+title: Cuaderno
+description: "Notas que escribo mientras trabajo. Algunas salen de lecturas, otras del campo o de la clase."
+permalink: /cuaderno/
+seccion: cuaderno
+---
+{%- assign notas = site.cuaderno | sort: "date" | reverse %}
+
+  <div class="wrap row page-head">
+    <h1 class="main-wide page-title">Cuaderno</h1>
+  </div>
+
+  <div class="wrap row page-intro">
+    <div class="main prose">
+      <p class="lead">Notas que escribo mientras trabajo. Algunas salen de lecturas, otras del campo o de la clase. Las publico porque escribirlas para alguien más me obliga a pensarlas mejor. No hay periodicidad ni orden temático.</p>
+    </div>
+  </div>
+
+  <section class="section wrap" aria-label="Notas">
+    {%- for n in notas %}
+    <div class="row note-row">
+      <p class="rail note-row-date">{% include fecha.html fecha=n.date %}</p>
+      <div class="main-wide">
+        <h2 class="t"><a href="{{ n.url | relative_url }}">{{ n.title }}</a></h2>
+        {%- assign linea = n.resumen | default: n.extracto %}
+        {%- if linea %}
+        <p class="note-row-sum">{{ linea }}</p>
+        {%- endif %}
+      </div>
+    </div>
+    {%- endfor %}
+  </section>
+
+  <div class="wrap row">
+    <div class="main-wide">
+      <p class="more"><a href="{{ '/cuaderno/feed.xml' | relative_url }}">RSS</a></p>
+    </div>
+  </div>

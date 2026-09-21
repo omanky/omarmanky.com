@@ -1,0 +1,71 @@
+---
+layout: default
+title: Omar Manky
+description: "Omar Manky, sociólogo del trabajo en Lima. Temas, publicaciones y un cuaderno de notas."
+---
+{%- assign notas = site.cuaderno | sort: "date" | reverse %}
+
+  <section class="wrap row intro-top home-intro" aria-label="Presentación">
+    <div class="main-wide intro-block">
+      <figure class="photo photo--wide">
+        <div class="photo-frame"><img src="{{ '/assets/img/omar-pizarra.jpg' | relative_url }}" width="1352" height="745" decoding="async" alt="Omar Manky, riendo, junto a una pizarra con un perro dibujado. Nagoya, 2025."></div>
+        <figcaption>Nagoya, 2025</figcaption>
+      </figure>
+      <h1 class="visually-hidden">Omar Manky</h1>
+      <p class="intro">Soy sociólogo y estudio el trabajo. Me interesa entender lo que hacen las personas y las organizaciones cuando cambian las reglas, los lugares o las tecnologías con las que trabajan.</p>
+      <p class="intro-after">He seguido esa pregunta en sindicatos mineros de Perú, en el paro agrario de 2020, en universidades y en los autos de conductores de aplicativos en Lima. Ahora la sigo en oficinas donde la inteligencia artificial empieza a cambiar la manera en que se trabaja. Enseño en la Universidad del Pacífico.</p>
+    </div>
+  </section>
+
+  <section class="section wrap" aria-labelledby="estos-dias">
+    <div class="row">
+      <h2 class="rail label label--mark" id="estos-dias">Estos días</h2>
+      <div class="main-wide">
+        <ul class="now-list">
+          {%- for p in site.data.estos_dias %}
+          {%- assign t = site.data.temas | where: "slug", p.tema | first %}
+          <li class="now-item">
+            <span class="status">{{ p.estado }}</span>
+            <h3>{{ p.titulo }}</h3>
+            <p>{% if p.con %}<span class="with">{{ p.con }}</span> {% endif %}{{ p.texto }}</p>
+            <p class="to"><span class="mark mark--{{ t.acento }}" aria-hidden="true"></span><a href="{{ '/temas/' | append: t.slug | append: '/' | relative_url }}">{{ t.nombre }}</a></p>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+{% if notas.size > 0 %}
+  <section class="section wrap" aria-labelledby="del-cuaderno">
+    <div class="row">
+      <h2 class="rail label label--mark" id="del-cuaderno">Del cuaderno</h2>
+      <div class="main-wide">
+        <ul class="notes">
+          {%- for n in notas limit: 3 %}
+          <li>
+            <span class="d">{% include fecha.html fecha=n.date %}</span>
+            <h3 class="t"><a href="{{ n.url | relative_url }}">{{ n.title }}</a></h3>
+          </li>
+          {%- endfor %}
+        </ul>
+        <p class="more"><a href="{{ '/cuaderno/' | relative_url }}">Todo el cuaderno</a></p>
+      </div>
+    </div>
+  </section>
+{% endif %}
+  <section class="section wrap" aria-labelledby="temas">
+    <div class="row">
+      <h2 class="rail label label--mark" id="temas">Temas</h2>
+      <div class="main-wide">
+        <ol class="theme-index">
+          {%- for t in site.data.temas %}
+          <li data-accent="{{ t.acento }}"><a href="{{ '/temas/' | append: t.slug | append: '/' | relative_url }}">
+            <span class="num">{{ t.num }}</span>
+            <span class="t">{{ t.nombre }}</span>
+            <span class="q">{{ t.pregunta }}</span>
+          </a></li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </div>
+  </section>

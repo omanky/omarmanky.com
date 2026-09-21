@@ -1,0 +1,21 @@
+# Los cuatro temas del sitio. «pregunta» es la frase de la portada y la descripción para buscadores.
+- slug: trabajo-organizacion-y-conflicto
+  num: "01"
+  nombre: "Trabajo, organización y conflicto"
+  acento: rojo
+  pregunta: "De dónde sacan fuerza quienes tienen pocos recursos para organizarse, y por qué sus movilizaciones no siempre dejan organizaciones que duren."
+- slug: mineria-agroexportacion-y-territorio
+  num: "02"
+  nombre: "Minería, agroexportación y territorio"
+  acento: mostaza
+  pregunta: "Cómo los lugares donde se vive, se trabaja y se circula cambian lo que los trabajadores pueden hacer juntos."
+- slug: tecnologia-y-trabajo
+  num: "03"
+  nombre: "Tecnología y trabajo"
+  acento: azul
+  pregunta: "Plataformas, automatización e inteligencia artificial, vistas desde un país donde la mayoría trabaja en la informalidad."
+- slug: universidad-y-conocimiento
+  num: "04"
+  nombre: "Universidad y conocimiento"
+  acento: oliva
+  pregunta: "Quién decide cómo funciona una universidad, y con qué reglas se produce conocimiento desde la periferia."

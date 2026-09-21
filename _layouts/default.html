@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head>
+{% include head.html %}
+</head>
+<body data-accent="{{ page.acento | default: 'rojo' }}">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+{% include header.html %}
+
+<main id="contenido">
+{{ content }}
+</main>
+
+{% include footer.html %}
+</body>
+</html>
