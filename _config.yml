@@ -9,7 +9,7 @@ timezone: America/Lima
 
 # Mientras el sitio no esté publicado, todas las páginas piden a los buscadores que no las indexen
 # y robots.txt cierra el paso. El día de la publicación: cambiar a false. Es el único cambio.
-noindex: true
+noindex: false
 
 permalink: pretty
 future: true          # una nota fechada hoy se publica aunque el reloj del servidor vaya en otra zona horaria
