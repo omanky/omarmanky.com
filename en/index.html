@@ -10,11 +10,11 @@ traduccion: /
 {%- assign notas = site.cuaderno | sort: "date" | reverse %}
 
   <section class="wrap row intro-top home-intro" aria-label="Introduction">
-    <div class="main-wide intro-block">
-      <figure class="photo photo--wide">
-        <div class="photo-frame"><img src="{{ '/assets/img/omar-playa.jpg' | relative_url }}" width="1536" height="1152" decoding="async" alt="{{ tx.foto_alt }}"></div>
-        <figcaption>{{ tx.foto_pie }}</figcaption>
-      </figure>
+    <figure class="photo photo--wide hero-photo">
+      <div class="photo-frame"><img src="{{ '/assets/img/omar-playa.jpg' | relative_url }}" width="1536" height="1152" decoding="async" alt="{{ tx.foto_alt }}"></div>
+      <figcaption>{{ tx.foto_pie }}</figcaption>
+    </figure>
+    <div class="intro-block hero-text">
       <h1 class="visually-hidden">Omar Manky</h1>
       <p class="intro">I am a sociologist and I study work. I am interested in understanding what people and organizations do when the rules, the places or the technologies they work with change.</p>
       <p class="intro-after">I have followed that question among mining unions in Peru, in the 2020 farmworkers' strike, in universities and in the cars of app drivers in Lima. I now follow it into offices where artificial intelligence is beginning to change the way people work. I teach at the Universidad del Pacífico.</p>
@@ -43,15 +43,25 @@ traduccion: /
   <section class="section wrap" aria-labelledby="from-the-notebook">
     <div class="row">
       <h2 class="rail label label--mark" id="from-the-notebook">{{ tx.del_cuaderno }}</h2>
-      <div class="main-wide">
+      <div class="main-wide notebook-block">
         <ul class="notes">
           {%- for n in notas limit: 3 %}
           <li>
             <span class="d">{% include fecha.html fecha=n.date %}</span>
             <h3 class="t"><a href="{{ n.url | relative_url }}" lang="es">{{ n.title }}</a></h3>
+            {%- assign bajada = n.bajada_en | default: n.bajada %}
+            {%- if bajada %}
+            <p class="sub">{{ bajada }}</p>
+            {%- endif %}
           </li>
           {%- endfor %}
         </ul>
+        {%- assign primera = notas | first %}
+        {%- if primera.imagen %}
+        <figure class="notebook-photo">
+          <div class="photo-frame"><img src="{{ primera.imagen | relative_url }}" width="1200" height="900" loading="lazy" decoding="async" alt="{{ primera.imagen_alt_en | default: primera.imagen_alt }}"></div>
+        </figure>
+        {%- endif %}
         <p class="more"><a href="{{ tx.rutas.cuaderno | relative_url }}">{{ tx.todo_el_cuaderno }}</a></p>
       </div>
     </div>

@@ -448,3 +448,39 @@ html { background: var(--paper); }
 .note-row .t a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.15em; text-decoration-color: var(--accent-mark); }
 .note-row-sum { margin-top: var(--s-2); font-size: var(--fs-secondary); font-weight: var(--fw-secondary); line-height: 1.55; color: var(--ink-soft); max-width: var(--measure); }
 @media (max-width: 55.99rem) { .note-row-date { padding-top: 0; } }
+
+/* ---------- 23. Ronda de equilibrio (26 sep 2026): portada en dos columnas, «Del cuaderno» con foto, pie más ligero ---------- */
+/* Portada. Desde 64rem (1024 px) la foto va a la izquierda en 5 de las 12 columnas (unos 40 %) y la presentación a la
+   derecha en las 7 restantes, las dos alineadas por arriba. Entre 56 y 64rem se conserva lo anterior (foto sobre el
+   texto, en la columna principal); por debajo de 56rem, una sola columna: foto y luego texto. */
+.home-intro { align-items: start; }
+.hero-photo, .hero-text { grid-column: 1 / -1; min-width: 0; }
+@media (min-width: 56rem) { .hero-photo, .hero-text { grid-column: 4 / -1; } }
+@media (min-width: 64rem) {
+  .hero-photo { grid-column: 1 / span 5; max-width: none; margin-bottom: 0; }
+  .hero-text { grid-column: 6 / -1; }
+  .hero-text .intro { margin-top: -0.25em; }  /* la línea de mayúsculas del texto, a la altura del borde alto de la foto */
+}
+
+/* «Del cuaderno». La columna principal se divide en texto (fecha, título, bajada, enlace) y una foto pequeña a la
+   derecha, un tercio de la columna, alineada por arriba. En una sola columna la foto va primero, como en la portada. */
+.notes .sub { margin-top: var(--s-2); font-size: var(--fs-secondary); font-weight: var(--fw-secondary); line-height: 1.55; color: var(--ink-soft); max-width: var(--measure); }
+.notebook-block { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: var(--s-4); column-gap: var(--gutter); align-items: start; }
+.notebook-block .more { margin-top: 0; }
+.notebook-photo .photo-frame { aspect-ratio: 4 / 3; }
+@media (max-width: 55.99rem) {
+  .notebook-photo { order: -1; max-width: 24rem; margin-bottom: var(--s-2); }
+}
+@media (min-width: 56rem) {
+  .notebook-block { grid-template-columns: minmax(0, 1fr) clamp(12rem, 34%, 17rem); }
+  .notebook-block .notes, .notebook-block .more { grid-column: 1; }
+  .notebook-photo { grid-column: 2; grid-row: 1 / span 2; }
+}
+
+/* Pie: la misma información, un punto más pequeña y más gris, con la regla fina y algo más de aire por encima. */
+.site-footer { border-top-color: var(--rule-mid); padding-block: var(--s-6) var(--s-8); }
+@media (min-width: 56rem) { .site-footer { margin-top: calc(var(--s-10) + var(--s-6)); } }
+.footer-name { font-size: 1rem; font-weight: 500; color: var(--ink-soft); }
+.footer-cols li, .footer-cols p { font-size: 0.875rem; line-height: 1.7; color: var(--ink-muted); }
+.footer-cols a { color: var(--ink-muted); text-decoration-color: var(--rule-mid); }
+.footer-cols a:hover { color: var(--ink); text-decoration-color: var(--ink); }
