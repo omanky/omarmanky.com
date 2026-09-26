@@ -368,10 +368,11 @@ html { background: var(--paper); }
 }
 
 /* ---------- 19. Portada: foto apaisada sobre la entrada ---------- */
-/* Omar prefiere el encuadre horizontal original (la pizarra con el perro entra completa),
-   así que la foto sale del riel y se apoya sobre el texto, alineada con él. */
+/* Omar prefiere el encuadre horizontal original, así que la foto sale del riel y se apoya
+   sobre el texto, alineada con él. La proporción del marco es la de la foto en uso, sin recorte:
+   desde el 26 de septiembre de 2026, omar-playa.jpg (1536 × 1152, 4:3); antes, omar-pizarra.jpg (1690 / 931). */
 .photo--wide { width: 100%; max-width: 34rem; margin-bottom: var(--s-5); }
-.photo--wide .photo-frame { aspect-ratio: 1690 / 931; }
+.photo--wide .photo-frame { aspect-ratio: 1536 / 1152; }
 @media (max-width: 55.99rem) { .photo--wide { width: 100%; max-width: none; margin-bottom: var(--s-4); } }
 
 /* ---------- 20. Cuaderno (20 sep 2026, con la primera nota) ---------- */

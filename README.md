@@ -1,6 +1,6 @@
 # omarmanky.com
 
-Sitio personal de Omar Manky. Jekyll, tal como lo compila GitHub Pages: sin plugins propios, sin JavaScript, sin analítica.
+Sitio personal de Omar Manky. Jekyll, tal como lo compila GitHub Pages: sin plugins propios. El único JavaScript es el contador de Cloudflare Web Analytics (sin cookies), en `_layouts/default.html`.
 
 - `_publicaciones/` — una ficha por publicación. Se generan desde el catálogo del autor; no se editan a mano.
 - `_cuaderno/` — las notas del Cuaderno, una por archivo Markdown.
