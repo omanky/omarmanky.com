@@ -9,6 +9,7 @@ anio: 2023
 en_prensa: false
 anio_lista: "2023"
 tipo: "Datos"
+tipo_en: "Dataset"
 bloque: "datos"
 orden: 32
 autores_linea: "Omar Manky"

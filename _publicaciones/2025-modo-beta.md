@@ -9,6 +9,7 @@ anio: 2025
 en_prensa: false
 anio_lista: "2025"
 tipo: "Política pública"
+tipo_en: "Policy paper"
 bloque: "investigacion"
 orden: 13
 autores_linea: "Omar Manky"

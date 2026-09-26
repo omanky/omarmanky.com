@@ -9,6 +9,7 @@ anio: 2024
 en_prensa: false
 anio_lista: "2024"
 tipo: "Artículo"
+tipo_en: "Article"
 bloque: "investigacion"
 orden: 17
 autores_linea: "Omar Manky, Natalia Mogollón y Vanessa Azañedo"

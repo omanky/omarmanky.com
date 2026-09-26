@@ -9,6 +9,7 @@ anio: 2024
 en_prensa: false
 anio_lista: "2024"
 tipo: "Capítulo"
+tipo_en: "Chapter"
 bloque: "investigacion"
 orden: 25
 autores_linea: "Juan Carlos Celis Ospina y Omar Manky"

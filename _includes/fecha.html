@@ -1,4 +1,5 @@
-{%- comment -%} Fecha en español: «20 de septiembre de 2026». Uso: {% include fecha.html fecha=doc.date %} {%- endcomment -%}
-{%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," -%}
+{%- comment -%} Fecha en el idioma de la página: «20 de septiembre de 2026» (es) o «20 September 2026» (en). Uso: {% include fecha.html fecha=doc.date %} {%- endcomment -%}
+{%- assign idioma = page.lang | default: "es" -%}
+{%- assign tx = site.data.textos[idioma] -%}
 {%- assign m = include.fecha | date: "%-m" | minus: 1 -%}
-<time datetime="{{ include.fecha | date: '%Y-%m-%d' }}">{{ include.fecha | date: "%-d" }} de {{ meses[m] }} de {{ include.fecha | date: "%Y" }}</time>
+<time datetime="{{ include.fecha | date: '%Y-%m-%d' }}">{% if idioma == "en" %}{{ include.fecha | date: "%-d" }} {{ tx.meses[m] }} {{ include.fecha | date: "%Y" }}{% else %}{{ include.fecha | date: "%-d" }} de {{ tx.meses[m] }} de {{ include.fecha | date: "%Y" }}{% endif %}</time>

@@ -1,18 +1,32 @@
 # Bloque «Estos días» de la portada. Lo que está en curso o en revisión vive solo aquí.
+# Los campos *_en son la versión inglesa (portada /en/); los campos sin sufijo, la española.
 - titulo: "El primer escalón"
+  titulo_en: "El primer escalón"
   estado: "Proyecto en curso"
+  estado_en: "Project in progress"
   texto: "Muchos profesionales aprendieron su oficio en sus primeros empleos, haciendo tareas sencillas junto a alguien con más experiencia. Investigo qué ocurre con ese aprendizaje cuando la inteligencia artificial empieza a hacer parte de las tareas con las que antes se aprendía trabajando."
+  texto_en: "Many professionals learned their trade in their first jobs, doing simple tasks alongside someone with more experience. I am researching what happens to that learning when artificial intelligence begins to do some of the tasks through which people used to learn on the job."
   tema: tecnologia-y-trabajo
 - titulo: "Comparando plataformas"
+  titulo_en: "Comparando plataformas"
   estado: "Artículo en revisión"
+  estado_en: "Article under review"
   texto: "En Lima, muchos conductores y repartidores trabajan con varias aplicaciones abiertas a la vez. Estudio cómo usan la competencia entre plataformas para ganar algo de margen dentro de sistemas que también los controlan."
+  texto_en: "In Lima, many drivers and delivery workers work with several apps open at once. I study how they use competition between platforms to gain some room for maneuver within systems that also control them."
   tema: tecnologia-y-trabajo
 - titulo: "¿Más allá del sindicato?"
+  titulo_en: "¿Más allá del sindicato?"
   estado: "Proyecto en curso"
+  estado_en: "Project in progress"
   con: "Con Valentina Linares"
+  con_en: "With Valentina Linares,"
   texto: "estudio cómo cambiaron las huelgas y protestas laborales en el Perú desde los años noventa. Quién las hace, dónde ocurren, qué organizaciones las sostienen, y por qué una movilización puede crecer sin dejar instituciones que duren."
+  texto_en: "I study how strikes and labor protests in Peru have changed since the 1990s. Who carries them out, where they happen, which organizations sustain them, and why a mobilization can grow without leaving behind institutions that last."
   tema: trabajo-organizacion-y-conflicto
 - titulo: "China en el aula"
+  titulo_en: "China en el aula"
   estado: "Proyecto en curso"
+  estado_en: "Project in progress"
   texto: "Universidades y carreras profesionales peruanas están incorporando herramientas de inteligencia artificial. Estudio cómo ocurre eso y cómo entran en el proceso empresas e infraestructuras tecnológicas de países en competencia como Estados Unidos y China."
+  texto_en: "Peruvian universities and degree programs are adopting artificial intelligence tools. I study how that happens and how companies and technological infrastructures from competing countries, such as the United States and China, enter the process."
   tema: universidad-y-conocimiento

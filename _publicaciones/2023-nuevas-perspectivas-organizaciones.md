@@ -9,6 +9,7 @@ anio: 2023
 en_prensa: false
 anio_lista: "2023"
 tipo: "Capítulo"
+tipo_en: "Chapter"
 bloque: "investigacion"
 orden: 29
 autores_linea: "Omar Manky y Micaela Reynoso"

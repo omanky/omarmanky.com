@@ -9,6 +9,7 @@ anio: 2017
 en_prensa: false
 anio_lista: "2017"
 tipo: "Libro editado"
+tipo_en: "Edited book"
 bloque: "investigacion"
 orden: 59
 autores_linea: "Omar Manky (ed.)"

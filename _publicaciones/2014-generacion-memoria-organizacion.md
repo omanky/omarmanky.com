@@ -9,6 +9,7 @@ anio: 2014
 en_prensa: false
 anio_lista: "2014"
 tipo: "Capítulo"
+tipo_en: "Chapter"
 bloque: "investigacion"
 orden: 61
 autores_linea: "Omar Manky y Sebastián Muñoz-Nájar"

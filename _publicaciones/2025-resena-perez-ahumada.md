@@ -9,6 +9,7 @@ anio: 2025
 en_prensa: false
 anio_lista: "2025"
 tipo: "Reseña"
+tipo_en: "Review"
 bloque: "resenas"
 orden: 15
 autores_linea: "Omar Manky"

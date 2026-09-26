@@ -9,6 +9,7 @@ anio: 2017
 en_prensa: false
 anio_lista: "2017"
 tipo: "Artículo"
+tipo_en: "Article"
 bloque: "investigacion"
 orden: 55
 autores_linea: "Omar Manky"

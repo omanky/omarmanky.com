@@ -9,6 +9,7 @@ anio: 2021
 en_prensa: false
 anio_lista: "2021"
 tipo: "Artículo"
+tipo_en: "Article"
 bloque: "investigacion"
 orden: 39
 autores_linea: "Omar Manky y Juan Dolores"

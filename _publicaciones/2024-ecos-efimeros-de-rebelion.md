@@ -9,6 +9,7 @@ anio: 2024
 en_prensa: false
 anio_lista: "2024"
 tipo: "Artículo"
+tipo_en: "Article"
 bloque: "investigacion"
 orden: 20
 autores_linea: "Omar Manky, Micaela Reynoso y Aroma Calderón"

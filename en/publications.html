@@ -1,29 +1,31 @@
 ---
 layout: default
-title: Publicaciones
-description: "Todo lo publicado, agrupado por tipo de trabajo. Cuando el texto está en acceso abierto, el enlace lleva al PDF; si no, a la página de la revista o de la editorial."
-permalink: /publicaciones/
+lang: en
+title: Publications
+description: "Everything I have published, grouped by type of work. When the text is open access, the link goes to the PDF; otherwise, to the journal's or the publisher's page."
+permalink: /en/publications/
 seccion: publicaciones
-traduccion: /en/publications/
+traduccion: /publicaciones/
 ---
+{%- assign tx = site.data.textos.en -%}
 {%- assign todas = site.publicaciones | sort: "orden" %}
 {%- assign investigacion = todas | where: "bloque", "investigacion" %}
 {%- assign resenas = todas | where: "bloque", "resenas" %}
 {%- assign datos = todas | where: "bloque", "datos" %}
 
   <div class="wrap row page-head">
-    <h1 class="main-wide page-title">Publicaciones</h1>
+    <h1 class="main-wide page-title">{{ tx.menu.publicaciones }}</h1>
   </div>
 
   <div class="wrap row page-intro">
     <div class="main prose">
-      <p class="lead">Todo lo publicado, agrupado por tipo de trabajo. Cuando el texto está en acceso abierto, el enlace lleva al PDF; si no, a la página de la revista o de la editorial.</p>
+      <p class="lead">Everything I have published, grouped by type of work. When the text is open access, the link goes to the PDF; otherwise, to the journal's or the publisher's page.</p>
     </div>
   </div>
 
-  <section class="section wrap" aria-labelledby="investigacion">
+  <section class="section wrap" aria-labelledby="research">
     <div class="row">
-      <h2 class="rail label label--mark" id="investigacion">Investigación</h2>
+      <h2 class="rail label label--mark" id="research">{{ tx.investigacion }}</h2>
       <div class="main-wide">
         <ul class="cat">
           {%- for p in investigacion %}
@@ -32,7 +34,7 @@ traduccion: /en/publications/
         </ul>
         {%- if resenas.size > 0 %}
         <details class="fold">
-          <summary>Reseñas y editoriales</summary>
+          <summary>{{ tx.resenas_y_editoriales }}</summary>
           <ul class="cat">
             {%- for p in resenas %}
             {% include fila-publicacion.html doc=p %}
@@ -44,9 +46,9 @@ traduccion: /en/publications/
     </div>
   </section>
 
-  <section class="section wrap" aria-labelledby="escritura-publica">
+  <section class="section wrap" aria-labelledby="public-writing">
     <div class="row">
-      <h2 class="rail label label--mark" id="escritura-publica">Escritura pública</h2>
+      <h2 class="rail label label--mark" id="public-writing">{{ tx.escritura_publica }}</h2>
       <ul class="main-wide cat">
         {%- for e in site.data.escritura_publica %}
         {% include fila-escritura.html item=e %}
@@ -55,9 +57,9 @@ traduccion: /en/publications/
     </div>
   </section>
 
-  <section class="section wrap" aria-labelledby="datos-y-recursos">
+  <section class="section wrap" aria-labelledby="data-and-resources">
     <div class="row">
-      <h2 class="rail label label--mark" id="datos-y-recursos">Datos y recursos</h2>
+      <h2 class="rail label label--mark" id="data-and-resources">{{ tx.datos_y_recursos }}</h2>
       <ul class="main-wide cat">
         {%- for p in datos %}
         {% include fila-publicacion.html doc=p %}

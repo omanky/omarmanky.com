@@ -1,13 +1,15 @@
 ---
 layout: default
 ---
+{%- assign idioma = page.lang | default: "es" -%}
+{%- assign tx = site.data.textos[idioma] -%}
 {%- assign tema = site.data.temas | where: "slug", page.tema | first -%}
 {%- assign trabajos = site.data.trabajos_por_tema[page.tema] -%}
 {%- assign escritura = site.data.escritura_publica | where_exp: "e", "e.temas contains page.tema" -%}
 {%- assign notas = site.cuaderno | where_exp: "n", "n.temas contains page.tema" | sort: "date" | reverse %}
 
   <div class="wrap row page-head">
-    <p class="rail eyebrow"><a href="{{ '/#temas' | relative_url }}">Temas</a><span class="sep">/</span><span class="num">{{ tema.num }}</span></p>
+    <p class="rail eyebrow"><a href="{{ tx.rutas.temas | relative_url }}">{{ tx.temas }}</a><span class="sep">/</span><span class="num">{{ tema.num }}</span></p>
     <h1 class="main-wide page-title">{{ tema.nombre }}</h1>
   </div>
 
@@ -19,7 +21,7 @@ layout: default
 
   <section class="section wrap" aria-labelledby="trabajos">
     <div class="row">
-      <h2 class="rail label label--mark" id="trabajos">Trabajos</h2>
+      <h2 class="rail label label--mark" id="trabajos">{{ tx.trabajos }}</h2>
       <p class="main-wide list-intro">Todos los trabajos de este tema, del más reciente al más antiguo. La lista completa del sitio está en <a href="{{ '/publicaciones/' | relative_url }}">Publicaciones</a>.</p>
     </div>
 
@@ -36,7 +38,7 @@ layout: default
             <p class="m">{{ w.meta_html }}</p>
             {%- for otro in w.tambien %}
             {%- assign t2 = site.data.temas | where: "slug", otro | first %}
-            <p class="also"><span class="mark mark--{{ t2.acento }}" aria-hidden="true"></span>También en <a href="{{ '/temas/' | append: t2.slug | append: '/' | relative_url }}">{{ t2.nombre }}</a></p>
+            <p class="also"><span class="mark mark--{{ t2.acento }}" aria-hidden="true"></span>{{ tx.tambien_en }} <a href="{{ '/temas/' | append: t2.slug | append: '/' | relative_url }}">{{ t2.nombre }}</a></p>
             {%- endfor %}
           </div>
         </li>
@@ -47,7 +49,7 @@ layout: default
 {% if escritura.size > 0 %}
   <section class="section-sub wrap" aria-labelledby="escritura">
     <div class="row">
-      <h2 class="rail label" id="escritura">Escritura pública</h2>
+      <h2 class="rail label" id="escritura">{{ tx.escritura_publica }}</h2>
       <ul class="main cat">
         {%- for e in escritura %}
         {% include fila-escritura.html item=e tipo_en_linea=true %}
@@ -59,7 +61,7 @@ layout: default
 {%- if notas.size > 0 %}
   <section class="section-sub wrap" aria-labelledby="del-cuaderno">
     <div class="row">
-      <h2 class="rail label" id="del-cuaderno">Del cuaderno</h2>
+      <h2 class="rail label" id="del-cuaderno">{{ tx.del_cuaderno }}</h2>
       <ul class="main cat">
         {%- for n in notas %}
         <li>
@@ -75,7 +77,7 @@ layout: default
 {% endif %}
   <section class="section-sub wrap" aria-labelledby="otros">
     <div class="row">
-      <h2 class="rail label" id="otros">Otros temas</h2>
+      <h2 class="rail label" id="otros">{{ tx.otros_temas }}</h2>
       <div class="main-wide cross">
         {%- for t in site.data.temas %}{% unless t.slug == page.tema %}
         <a href="{{ '/temas/' | append: t.slug | append: '/' | relative_url }}"><span class="mark mark--{{ t.acento }}" aria-hidden="true"></span>{{ t.nombre }}</a>

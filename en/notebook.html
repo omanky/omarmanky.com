@@ -1,0 +1,26 @@
+---
+layout: default
+lang: en
+title: Notebook
+description: "The notebook is written in Spanish. Notes I write while working, some from reading, others from fieldwork or the classroom."
+permalink: /en/notebook/
+seccion: cuaderno
+traduccion: /cuaderno/
+---
+{%- assign tx = site.data.textos.en %}
+
+  <div class="wrap row page-head">
+    <h1 class="main-wide page-title">{{ tx.menu.cuaderno }}</h1>
+  </div>
+
+  <div class="wrap row page-intro">
+    <div class="main prose">
+      <p class="lead">The notebook is written in Spanish. It gathers notes I write while working, some from reading and others from fieldwork or the classroom, and <a href="{{ '/cuaderno/' | relative_url }}">you can read it there</a>.</p>
+    </div>
+  </div>
+
+  <div class="wrap row">
+    <div class="main-wide">
+      <p class="more"><a href="{{ '/cuaderno/feed.xml' | relative_url }}">RSS</a></p>
+    </div>
+  </div>

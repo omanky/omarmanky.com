@@ -1,11 +1,15 @@
+{%- comment -%} Una fila de «Escritura pública». Uso: {% include fila-escritura.html item=e %} (tipo_en_linea=true en las páginas de tema). En una página inglesa muestra tipo_en. {%- endcomment -%}
+{%- assign idioma = page.lang | default: "es" -%}
+{%- assign tx = site.data.textos[idioma] -%}
 {%- assign e = include.item -%}
+{%- if idioma == "en" -%}{%- assign tipo_mostrado = e.tipo_en -%}{%- else -%}{%- assign tipo_mostrado = e.tipo -%}{%- endif -%}
 <li>
   <span class="y">{{ e.anio }}</span>
   <div>
     <p class="t"><a href="{{ e.url }}">{{ e.titulo }}</a></p>
-    <p class="m">{% if include.tipo_en_linea %}{{ e.tipo }} · {% else %}<span class="k-inline k">{{ e.tipo }} · </span>{% endif %}{% if e.autores_cortos %}{{ e.autores_cortos }} · {% endif %}{{ e.medio_html }}</p>
+    <p class="m">{% if include.tipo_en_linea %}{{ tipo_mostrado }} · {% else %}<span class="k-inline k">{{ tipo_mostrado }} · </span>{% endif %}{% if e.autores_cortos %}{{ e.autores_cortos }} · {% endif %}{{ e.medio_html }}</p>
   </div>
   {%- unless include.tipo_en_linea %}
-  <span class="k-col">{{ e.tipo }}</span>
+  <span class="k-col">{{ tipo_mostrado }}</span>
   {%- endunless %}
 </li>

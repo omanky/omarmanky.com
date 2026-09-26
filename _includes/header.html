@@ -1,15 +1,21 @@
+{%- assign idioma = page.lang | default: "es" -%}
+{%- assign tx = site.data.textos[idioma] -%}
 <header class="site-header">
   <div class="wrap row">
-    <div class="rail"><a class="site-name" href="{{ '/' | relative_url }}">Omar Manky</a></div>
-    <nav class="main-wide site-nav" aria-label="Principal">
+    <div class="rail"><a class="site-name" href="{{ tx.rutas.portada | relative_url }}">Omar Manky</a></div>
+    <nav class="main-wide site-nav" aria-label="{{ tx.nav_principal }}">
       <ul>
-        <li><a href="{{ '/#temas' | relative_url }}"{% if page.seccion == "temas" %} aria-current="true"{% endif %}>Temas</a></li>
-        <li><a href="{{ '/publicaciones/' | relative_url }}"{% if page.seccion == "publicaciones" %} aria-current="{% if page.url == '/publicaciones/' %}page{% else %}true{% endif %}"{% endif %}>Publicaciones</a></li>
-        <li><a href="{{ '/charlas/' | relative_url }}"{% if page.seccion == "charlas" %} aria-current="page"{% endif %}>Charlas</a></li>
-        <li><a href="{{ '/cuaderno/' | relative_url }}"{% if page.seccion == "cuaderno" %} aria-current="{% if page.url == '/cuaderno/' %}page{% else %}true{% endif %}"{% endif %}>Cuaderno</a></li>
-        <li><a href="{{ '/sobre-mi/' | relative_url }}"{% if page.seccion == "sobre-mi" %} aria-current="page"{% endif %}>Sobre mí</a></li>
+        <li><a href="{{ tx.rutas.temas | relative_url }}"{% if page.seccion == "temas" %} aria-current="true"{% endif %}>{{ tx.menu.temas }}</a></li>
+        <li><a href="{{ tx.rutas.publicaciones | relative_url }}"{% if page.seccion == "publicaciones" %} aria-current="{% if page.url == tx.rutas.publicaciones %}page{% else %}true{% endif %}"{% endif %}>{{ tx.menu.publicaciones }}</a></li>
+        <li><a href="{{ tx.rutas.charlas | relative_url }}"{% if page.seccion == "charlas" %} aria-current="page"{% endif %}>{{ tx.menu.charlas }}</a></li>
+        <li><a href="{{ tx.rutas.cuaderno | relative_url }}"{% if page.seccion == "cuaderno" %} aria-current="{% if page.url == tx.rutas.cuaderno %}page{% else %}true{% endif %}"{% endif %}>{{ tx.menu.cuaderno }}</a></li>
+        <li><a href="{{ tx.rutas.sobre_mi | relative_url }}"{% if page.seccion == "sobre-mi" %} aria-current="page"{% endif %}>{{ tx.menu.sobre_mi }}</a></li>
       </ul>
-      <p class="lang"><span aria-current="true">ES</span> · <span class="off" title="Versión en inglés en preparación">EN</span></p>
+      {%- if idioma == "en" %}
+      <p class="lang">{% if page.traduccion %}<a href="{{ page.traduccion | relative_url }}" hreflang="es" lang="es">ES</a>{% else %}<span class="off" title="{{ tx.otro_idioma_en_preparacion }}">ES</span>{% endif %} · <span aria-current="true">EN</span></p>
+      {%- else %}
+      <p class="lang"><span aria-current="true">ES</span> · {% if page.traduccion %}<a href="{{ page.traduccion | relative_url }}" hreflang="en" lang="en">EN</a>{% else %}<span class="off" title="{{ tx.otro_idioma_en_preparacion }}">EN</span>{% endif %}</p>
+      {%- endif %}
     </nav>
   </div>
 </header>

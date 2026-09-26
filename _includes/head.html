@@ -1,14 +1,28 @@
+{%- assign idioma = page.lang | default: "es" -%}
+{%- assign tx = site.data.textos[idioma] -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {%- assign descripcion = page.description | default: site.description | strip_html | strip_newlines | escape %}
-{%- if page.url == "/" %}{% assign titulo = site.title %}{% else %}{% capture titulo %}{{ page.title | strip_html | escape }} · {{ site.title }}{% endcapture %}{% endif %}
+{%- if page.url == "/" or page.url == "/en/" %}{% assign titulo = site.title %}{% else %}{% capture titulo %}{{ page.title | strip_html | escape }} · {{ site.title }}{% endcapture %}{% endif %}
 <title>{{ titulo }}</title>
 <meta name="description" content="{{ descripcion }}">
 {%- unless page.sin_canonica %}
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+{%- if page.traduccion %}
+{%- if idioma == "en" %}
+<link rel="alternate" hreflang="es" href="{{ page.traduccion | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ page.traduccion | absolute_url }}">
+{%- else %}
 <link rel="alternate" hreflang="es" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ page.traduccion | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
+{%- endif %}
+{%- else %}
+<link rel="alternate" hreflang="{{ idioma }}" href="{{ page.url | absolute_url }}">
+{%- endif %}
 {%- endunless %}
-<link rel="alternate" type="application/atom+xml" title="Cuaderno · {{ site.title }}" href="{{ '/cuaderno/feed.xml' | relative_url }}">
+<link rel="alternate" type="application/atom+xml" title="{{ tx.feed_titulo }}" href="{{ '/cuaderno/feed.xml' | relative_url }}">
 {%- if site.noindex or page.sin_canonica %}
 <meta name="robots" content="noindex">
 {%- endif %}
@@ -16,12 +30,12 @@
 <meta property="og:title" content="{{ titulo }}">
 <meta property="og:description" content="{{ descripcion }}">
 <meta property="og:type" content="{% if page.layout == 'nota' or page.layout == 'ficha' %}article{% else %}website{% endif %}">
-<meta property="og:locale" content="es_PE">
+<meta property="og:locale" content="{{ tx.locale }}">
 {%- unless page.sin_canonica %}
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 {%- endunless %}
 <meta property="og:image" content="{{ '/assets/img/omar-playa.jpg' | absolute_url }}">
-<meta property="og:image:alt" content="Omar Manky, sonriendo, con lentes y camiseta blanca, en una playa cubierta de neblina. Lima, invierno de 2024.">
+<meta property="og:image:alt" content="{{ tx.foto_alt }}">
 <meta name="twitter:card" content="summary_large_image">
 {%- if page.layout == "ficha" %}
 {%- for m in page.meta_citation %}

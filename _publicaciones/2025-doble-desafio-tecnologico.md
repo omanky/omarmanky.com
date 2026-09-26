@@ -9,6 +9,7 @@ anio: 2025
 en_prensa: false
 anio_lista: "2025"
 tipo: "Informe"
+tipo_en: "Report"
 bloque: "investigacion"
 orden: 14
 autores_linea: "Omar Manky"

@@ -1,16 +1,18 @@
+{%- assign idioma = page.lang | default: "es" -%}
+{%- assign tx = site.data.textos[idioma] -%}
 <footer class="site-footer">
   <div class="wrap row">
     <p class="rail site-name footer-name">Omar Manky</p>
     <div class="main-wide footer-cols">
       <div>
-        <h2>Contacto</h2>
+        <h2>{{ tx.pie.contacto }}</h2>
         <ul>
           <li><a href="mailto:wo.mankyb@up.edu.pe">wo.mankyb@up.edu.pe</a></li>
           <li>Universidad del Pacífico, Lima</li>
         </ul>
       </div>
       <div>
-        <h2>En otros lugares</h2>
+        <h2>{{ tx.pie.otros_lugares }}</h2>
         <ul>
           <li><a href="https://orcid.org/0000-0003-1741-3461">ORCID 0000-0003-1741-3461</a></li>
           <li><a href="https://faculty.up.edu.pe/en/persons/omar-manky">FacultyUP</a></li>
@@ -18,12 +20,21 @@
         </ul>
       </div>
       <div>
-        <h2>Este sitio</h2>
+        <h2>{{ tx.pie.este_sitio }}</h2>
         <ul>
-          <li>Español · English en preparación</li>
-          {%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
+          {%- if idioma == "en" %}
+          {%- assign hermana = page.traduccion | default: "/" %}
+          <li><a href="{{ hermana | relative_url }}" hreflang="es" lang="es">Español</a> · English</li>
+          {%- else %}
+          {%- assign hermana = page.traduccion | default: "/en/" %}
+          <li>Español · <a href="{{ hermana | relative_url }}" hreflang="en" lang="en">English</a></li>
+          {%- endif %}
           {%- assign m = site.time | date: "%-m" | minus: 1 %}
-          <li>Revisado en {{ meses[m] }} de {{ site.time | date: "%Y" }}</li>
+          {%- if idioma == "en" %}
+          <li>{{ tx.pie.revisado_en }} {{ tx.meses[m] }} {{ site.time | date: "%Y" }}</li>
+          {%- else %}
+          <li>{{ tx.pie.revisado_en }} {{ tx.meses[m] }} de {{ site.time | date: "%Y" }}</li>
+          {%- endif %}
         </ul>
       </div>
     </div>

@@ -9,6 +9,7 @@ anio: 2007
 en_prensa: false
 anio_lista: "2007"
 tipo: "Boletín"
+tipo_en: "Bulletin"
 bloque: "investigacion"
 orden: 66
 autores_linea: "Omar Coronel y Omar Manky"

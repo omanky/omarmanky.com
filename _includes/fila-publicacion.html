@@ -1,10 +1,13 @@
-{%- comment -%} Una fila de lista seca (.cat) para una ficha. Uso: {% include fila-publicacion.html doc=p %} {%- endcomment -%}
+{%- comment -%} Una fila de lista seca (.cat) para una ficha. Uso: {% include fila-publicacion.html doc=p %}. En una página inglesa muestra tipo_en; «Capítulo» se compara siempre contra el campo español. {%- endcomment -%}
+{%- assign idioma = page.lang | default: "es" -%}
+{%- assign tx = site.data.textos[idioma] -%}
 {%- assign d = include.doc -%}
+{%- if idioma == "en" -%}{%- assign tipo_mostrado = d.tipo_en -%}{%- else -%}{%- assign tipo_mostrado = d.tipo -%}{%- endif -%}
 <li>
-  <span class="y">{{ d.anio_lista }}</span>
+  <span class="y">{% if d.en_prensa %}{{ tx.en_prensa }}{% else %}{{ d.anio_lista }}{% endif %}</span>
   <div>
     <p class="t"{% if d.titulo_lang %} lang="{{ d.titulo_lang }}"{% endif %}><a href="{{ d.url | relative_url }}">{{ d.titulo_html }}</a></p>
-    <p class="m"><span class="k-inline k">{{ d.tipo }} · </span>{% if d.autores_cortos %}{{ d.autores_cortos }} · {% endif %}{% if d.tipo == "Capítulo" %}en {% endif %}{{ d.lugar_html }}{% if d.acceso_abierto %} · acceso abierto{% endif %}</p>
+    <p class="m"><span class="k-inline k">{{ tipo_mostrado }} · </span>{% if d.autores_cortos %}{{ d.autores_cortos }} · {% endif %}{% if d.tipo == "Capítulo" %}{{ tx.en_capitulo }} {% endif %}{{ d.lugar_html }}{% if d.acceso_abierto %} · {{ tx.acceso_abierto }}{% endif %}</p>
   </div>
-  <span class="k-col">{{ d.tipo }}</span>
+  <span class="k-col">{{ tipo_mostrado }}</span>
 </li>

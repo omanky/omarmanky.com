@@ -9,6 +9,7 @@ anio: 2025
 en_prensa: false
 anio_lista: "2025"
 tipo: "Editorial"
+tipo_en: "Editorial"
 bloque: "resenas"
 orden: 16
 autores_linea: "Benjamin Anderson, Maurizio Atzeni, Elena Baglioni, Teri Caraway, Lucy Everitt, Omar Manky Bonilla, Ida Nikou, Nicolas Pons-Vignon, Anne-Iris Romens y Melisa Serrano"

@@ -9,6 +9,7 @@ anio: 2020
 en_prensa: false
 anio_lista: "2020"
 tipo: "Reseña"
+tipo_en: "Review"
 bloque: "resenas"
 orden: 46
 autores_linea: "Omar Manky"

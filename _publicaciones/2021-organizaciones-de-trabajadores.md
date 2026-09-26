@@ -9,6 +9,7 @@ anio: 2021
 en_prensa: false
 anio_lista: "2021"
 tipo: "Documento de trabajo"
+tipo_en: "Working paper"
 bloque: "investigacion"
 orden: 41
 autores_linea: "Omar Manky"

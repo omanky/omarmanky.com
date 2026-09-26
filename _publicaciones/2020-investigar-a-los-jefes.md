@@ -9,6 +9,7 @@ anio: 2020
 en_prensa: false
 anio_lista: "2020"
 tipo: "Artículo"
+tipo_en: "Article"
 bloque: "investigacion"
 orden: 43
 autores_linea: "Omar Manky"

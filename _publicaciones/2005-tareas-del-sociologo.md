@@ -9,6 +9,7 @@ anio: 2005
 en_prensa: false
 anio_lista: "2005"
 tipo: "Ensayo estudiantil"
+tipo_en: "Student essay"
 bloque: "investigacion"
 orden: 67
 autores_linea: "Omar Coronel, José Haya de la Torre, Omar Manky y Miguel Ángel Nación"

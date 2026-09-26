@@ -9,6 +9,7 @@ anio: 2022
 en_prensa: false
 anio_lista: "2022"
 tipo: "Informe"
+tipo_en: "Report"
 bloque: "investigacion"
 orden: 37
 autores_linea: "Juan Dolores, Omar Manky y E. Sousa"

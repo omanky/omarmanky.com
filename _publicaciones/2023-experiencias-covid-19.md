@@ -9,6 +9,7 @@ anio: 2023
 en_prensa: false
 anio_lista: "2023"
 tipo: "Libro editado"
+tipo_en: "Edited book"
 bloque: "investigacion"
 orden: 31
 autores_linea: "Omar Manky, María Ángela Prialé Valle y Pablo Lavado (eds.)"

@@ -9,6 +9,7 @@ anio: 2008
 en_prensa: false
 anio_lista: "2008"
 tipo: "Boletín"
+tipo_en: "Bulletin"
 bloque: "investigacion"
 orden: 65
 autores_linea: "Narda Henríquez Ayín y Omar Manky"

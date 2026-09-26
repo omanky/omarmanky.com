@@ -9,6 +9,7 @@ anio: 2022
 en_prensa: false
 anio_lista: "2022"
 tipo: "Documento de trabajo"
+tipo_en: "Working paper"
 bloque: "investigacion"
 orden: 36
 autores_linea: "Omar Manky, César Ponce, Adriana Portocarrero, Isaí Silva y Adriana García Saldivar"

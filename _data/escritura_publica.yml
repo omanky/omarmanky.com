@@ -5,6 +5,7 @@
   titulo: "Investigar con IA: entre el dato y la ilusión"
   url: "https://larepublica.pe/opinion/2026/06/22/investigar-con-ia-entre-el-dato-y-la-ilusion-por-omar-manky-hnews-2047364"
   tipo: "Columna"
+  tipo_en: "Column"
   medio_html: "<i>La República</i>"
   autores_cortos: "O. Manky, F. Ramírez"
   temas: []
@@ -13,6 +14,7 @@
   titulo: "¿Por qué es necesario formar profesionales en la era de la IA?"
   url: "https://larepublica.pe/opinion/2025/05/08/por-que-es-necesario-formar-profesionales-en-la-era-de-la-ia-por-omar-manky-hnews-443984"
   tipo: "Columna"
+  tipo_en: "Column"
   medio_html: "<i>La República</i>"
   autores_cortos: null
   temas: []
@@ -21,6 +23,7 @@
   titulo: "Inteligencia artificial: el desafío de adaptarse a un nuevo escenario laboral"
   url: "https://ciup.up.edu.pe/analisis/inteligencia-artificial-el-desafio-de-adaptarse-a-un-nuevo-escenario-laboral/"
   tipo: "Columna"
+  tipo_en: "Column"
   medio_html: "CIUP"
   autores_cortos: null
   temas: []
@@ -29,6 +32,7 @@
   titulo: "Más solidaridad que fe"
   url: "https://ciup.up.edu.pe/analisis/punto-de-equilibrio-25-precariedad-laboral-en-el-peru-de-la-post-pandemia/"
   tipo: "Ensayo breve"
+  tipo_en: "Short essay"
   medio_html: "<i>Punto de Equilibrio</i>, CIUP"
   autores_cortos: null
   temas:
@@ -38,6 +42,7 @@
   titulo: "Fantasmas radicales: Viejos y nuevos problemas en la educación superior"
   url: "https://ciup.up.edu.pe/analisis/fantasmas-radicales-viejos-y-nuevos-problemas-en-educacion-superior"
   tipo: "Ensayo breve"
+  tipo_en: "Short essay"
   medio_html: "<i>Punto de Equilibrio</i>, CIUP"
   autores_cortos: null
   temas: []
@@ -46,6 +51,7 @@
   titulo: "Mamita, los alienígenas"
   url: "https://elcomercio.pe/opinion/colaboradores/mamita-los-alienigenas-por-omar-manky-noticia/"
   tipo: "Columna"
+  tipo_en: "Column"
   medio_html: "<i>El Comercio</i>"
   autores_cortos: null
   temas:
@@ -55,6 +61,7 @@
   titulo: "Un Primero de Mayo diferente: repensar y revalorar a los trabajadores"
   url: "https://ciup.up.edu.pe/analisis/un-primero-de-mayo-diferente-repensar-revalorar-a-trabajadores/"
   tipo: "Columna"
+  tipo_en: "Column"
   medio_html: "CIUP"
   autores_cortos: null
   temas:
@@ -64,6 +71,7 @@
   titulo: "¿Y los empresarios?"
   url: "https://www.revistaquehacer.pe/1/y-los-empresarios"
   tipo: "Ensayo breve"
+  tipo_en: "Short essay"
   medio_html: "<i>Quehacer</i> 1(1)"
   autores_cortos: null
   temas: []

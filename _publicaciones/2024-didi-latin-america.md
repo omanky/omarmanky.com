@@ -9,6 +9,7 @@ anio: 2024
 en_prensa: false
 anio_lista: "2024"
 tipo: "Informe"
+tipo_en: "Report"
 bloque: "investigacion"
 orden: 26
 autores_linea: "Omar Manky y Natalia Mogollón"

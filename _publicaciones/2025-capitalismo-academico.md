@@ -9,6 +9,7 @@ anio: 2025
 en_prensa: false
 anio_lista: "2025"
 tipo: "Artículo"
+tipo_en: "Article"
 bloque: "investigacion"
 orden: 11
 autores_linea: "Omar Manky y Nattaly López"

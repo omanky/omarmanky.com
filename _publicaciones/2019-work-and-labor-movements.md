@@ -9,6 +9,7 @@ anio: 2019
 en_prensa: false
 anio_lista: "2019"
 tipo: "Entrada de enciclopedia"
+tipo_en: "Encyclopedia entry"
 bloque: "investigacion"
 orden: 49
 autores_linea: "Omar Manky"

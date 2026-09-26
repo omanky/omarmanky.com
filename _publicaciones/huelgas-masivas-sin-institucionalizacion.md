@@ -9,6 +9,7 @@ anio: null
 en_prensa: true
 anio_lista: "En prensa"
 tipo: "Artículo"
+tipo_en: "Article"
 bloque: "investigacion"
 orden: 2
 autores_linea: "Omar Manky y Valentina Linares"

@@ -9,6 +9,7 @@ anio: 2013
 en_prensa: false
 anio_lista: "2013"
 tipo: "Capítulo"
+tipo_en: "Chapter"
 bloque: "investigacion"
 orden: 62
 autores_linea: "Omar Manky"

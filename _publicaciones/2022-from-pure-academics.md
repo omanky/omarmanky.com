@@ -9,6 +9,7 @@ anio: 2022
 en_prensa: false
 anio_lista: "2022"
 tipo: "Artículo"
+tipo_en: "Article"
 bloque: "investigacion"
 orden: 34
 autores_linea: "Omar Manky y Sergio Saravia"

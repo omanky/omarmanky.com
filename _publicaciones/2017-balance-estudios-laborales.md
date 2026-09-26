@@ -9,6 +9,7 @@ anio: 2017
 en_prensa: false
 anio_lista: "2017"
 tipo: "Capítulo"
+tipo_en: "Chapter"
 bloque: "investigacion"
 orden: 58
 autores_linea: "Omar Manky, Alejandra Cueto y Sergio Saravia"

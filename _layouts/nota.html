@@ -22,7 +22,9 @@ layout: default
           <p><span class="mark mark--{{ t.acento }}" aria-hidden="true"></span><a href="{{ '/temas/' | append: t.slug | append: '/' | relative_url }}">{{ t.nombre }}</a></p>
           {%- endif %}
           {%- endfor %}
-          <p class="back"><a href="{{ '/cuaderno/' | relative_url }}">← Cuaderno</a></p>
+          {%- assign idioma = page.lang | default: "es" %}
+          {%- assign tx = site.data.textos[idioma] %}
+          <p class="back"><a href="{{ tx.rutas.cuaderno | relative_url }}">{{ tx.volver_cuaderno }}</a></p>
         </div>
       </div>
     </div>

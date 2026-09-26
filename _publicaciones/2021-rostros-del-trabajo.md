@@ -9,6 +9,7 @@ anio: 2021
 en_prensa: false
 anio_lista: "2021"
 tipo: "Libro editado"
+tipo_en: "Edited book"
 bloque: "investigacion"
 orden: 40
 autores_linea: "Omar Manky (ed.)"

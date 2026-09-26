@@ -9,6 +9,7 @@ anio: 2009
 en_prensa: false
 anio_lista: "2009"
 tipo: "Artículo"
+tipo_en: "Article"
 bloque: "investigacion"
 orden: 64
 autores_linea: "Omar Manky"

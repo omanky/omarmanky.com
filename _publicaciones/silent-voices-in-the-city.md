@@ -9,6 +9,7 @@ anio: null
 en_prensa: true
 anio_lista: "En prensa"
 tipo: "Capítulo"
+tipo_en: "Chapter"
 bloque: "investigacion"
 orden: 1
 autores_linea: "Omar Manky y Natalia Mogollón"

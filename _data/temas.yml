@@ -1,21 +1,30 @@
 # Los cuatro temas del sitio. «pregunta» es la frase de la portada y la descripción para buscadores.
+# «nombre_en» y «pregunta_en» son la versión inglesa (portada /en/); las páginas de tema siguen en español.
 - slug: trabajo-organizacion-y-conflicto
   num: "01"
   nombre: "Trabajo, organización y conflicto"
+  nombre_en: "Work, organization and conflict"
   acento: rojo
   pregunta: "De dónde sacan fuerza quienes tienen pocos recursos para organizarse, y por qué sus movilizaciones no siempre dejan organizaciones que duren."
+  pregunta_en: "Where those with few resources to organize find their strength, and why their mobilizations do not always leave behind organizations that last."
 - slug: mineria-agroexportacion-y-territorio
   num: "02"
   nombre: "Minería, agroexportación y territorio"
+  nombre_en: "Mining, agro-exports and territory"
   acento: mostaza
   pregunta: "Cómo los lugares donde se vive, se trabaja y se circula cambian lo que los trabajadores pueden hacer juntos."
+  pregunta_en: "How the places where people live, work and move around change what workers can do together."
 - slug: tecnologia-y-trabajo
   num: "03"
   nombre: "Tecnología y trabajo"
+  nombre_en: "Technology and work"
   acento: azul
   pregunta: "Plataformas, automatización e inteligencia artificial, vistas desde un país donde la mayoría trabaja en la informalidad."
+  pregunta_en: "Platforms, automation and artificial intelligence, seen from a country where most people work in the informal economy."
 - slug: universidad-y-conocimiento
   num: "04"
   nombre: "Universidad y conocimiento"
+  nombre_en: "Universities and knowledge"
   acento: oliva
   pregunta: "Quién decide cómo funciona una universidad, y con qué reglas se produce conocimiento desde la periferia."
+  pregunta_en: "Who decides how a university works, and under what rules knowledge is produced from the periphery."
