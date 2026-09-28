@@ -7,9 +7,6 @@ description: "Inicia septiembre, y he comprado libros en Guadalajara. Vengo leye
 extracto: "Inicia septiembre, y he comprado libros en Guadalajara. Vengo leyendo uno en el avión de vuelta a casa, y estoy seguro de que la gente me mira como a un sujeto extraño…"
 bajada: "Sobre lo raro que se me hace escribir en público."
 bajada_en: "On how awkward it feels to write in public."
-imagen: /assets/cuaderno/pepino-de-mar/mesa-cuaderno.jpg
-imagen_alt: "Sobre una mesa de madera, un cuaderno beige con un pájaro rojo dibujado, un lápiz y un libro."
-imagen_alt_en: "On a wooden table, a beige notebook with a red bird drawn on it, a pencil and a book."
 ---
 
 > Tú, como todos, eres lo que ocultas.

@@ -56,12 +56,9 @@ traduccion: /
           </li>
           {%- endfor %}
         </ul>
-        {%- assign primera = notas | first %}
-        {%- if primera.imagen %}
         <figure class="notebook-photo">
-          <div class="photo-frame"><img src="{{ primera.imagen | relative_url }}" width="1200" height="900" loading="lazy" decoding="async" alt="{{ primera.imagen_alt_en | default: primera.imagen_alt }}"></div>
+          <div class="photo-frame"><img src="{{ tx.cuaderno_foto | relative_url }}" width="1200" height="900" loading="lazy" decoding="async" alt="{{ tx.cuaderno_foto_alt }}"></div>
         </figure>
-        {%- endif %}
         <p class="more"><a href="{{ tx.rutas.cuaderno | relative_url }}">{{ tx.todo_el_cuaderno }}</a></p>
       </div>
     </div>

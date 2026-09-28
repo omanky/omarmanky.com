@@ -4,6 +4,7 @@ title: Omar Manky
 description: "Omar Manky, sociólogo del trabajo en Lima. Temas, publicaciones y un cuaderno de notas."
 traduccion: /en/
 ---
+{%- assign tx = site.data.textos.es -%}
 {%- assign notas = site.cuaderno | sort: "date" | reverse %}
 
   <section class="wrap row intro-top home-intro" aria-label="Presentación">
@@ -52,12 +53,9 @@ traduccion: /en/
           </li>
           {%- endfor %}
         </ul>
-        {%- assign primera = notas | first %}
-        {%- if primera.imagen %}
         <figure class="notebook-photo">
-          <div class="photo-frame"><img src="{{ primera.imagen | relative_url }}" width="1200" height="900" loading="lazy" decoding="async" alt="{{ primera.imagen_alt }}"></div>
+          <div class="photo-frame"><img src="{{ tx.cuaderno_foto | relative_url }}" width="1200" height="900" loading="lazy" decoding="async" alt="{{ tx.cuaderno_foto_alt }}"></div>
         </figure>
-        {%- endif %}
         <p class="more"><a href="{{ '/cuaderno/' | relative_url }}">Todo el cuaderno</a></p>
       </div>
     </div>
